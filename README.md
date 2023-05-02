@@ -1,2 +1,3 @@
-# i3conf
-Configuration file of i3
+# .dotfiles
+
+dotfiles for stow linking.
