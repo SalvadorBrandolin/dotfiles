@@ -1,0 +1,6 @@
+stow
+i3
+neovim
+
+
+htop
