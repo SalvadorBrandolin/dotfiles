@@ -1,6 +1,14 @@
-stow
 i3
+i3blocks
+lxapperance
+feh
+
+# Windows transparency (/etc/xdg/picom.conf)
+picom
+
+stow
 neovim
-
-
 htop
+
+# autorandr to store xrandr resolutions confs (antorandr --save) (autorandr --chagne)
+autorandr
