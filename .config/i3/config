@@ -208,6 +208,9 @@ bar {
 # Colors of focused
 client.focused #444444 #bf7500 #444444 #ffff70
 
+# Resolution
+exec "bash ~/dotfiles/resolution.sh"
+
 # Latam keymap
 exec setxkbmap latam
 
