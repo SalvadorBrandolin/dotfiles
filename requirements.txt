@@ -10,5 +10,4 @@ stow
 neovim
 htop
 
-# autorandr to store xrandr resolutions confs (antorandr --save) (autorandr --chagne)
-autorandr
+xcvt
