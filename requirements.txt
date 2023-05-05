@@ -4,6 +4,9 @@ lxappearance
 feh
 picom
 
+xrandr
+arandr
+
 stow
 neovim
 htop
