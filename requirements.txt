@@ -1,13 +1,12 @@
 i3
 i3blocks
-lxapperance
+lxappearance
 feh
-
-# Windows transparency (/etc/xdg/picom.conf)
 picom
 
 stow
 neovim
 htop
 
-xcvt
+maim
+xclip
