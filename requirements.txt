@@ -4,12 +4,18 @@ lxappearance
 feh
 picom
 
-xrandr
+zsh
+kitty
+
+x11-xserver-utils
 arandr
 
 stow
 neovim
+dmenu
+ranger
 htop
+screenfetch
 
 maim
 xclip

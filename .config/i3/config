@@ -205,14 +205,13 @@ bar {
         }
 }
 
-# class                 border  backgr. text    indicator
-client.focused          #444444 #bf7500 #444444 #ffff70
-client.focused_inactive #268bd2 #268bd2 #fdf6e3 #484e50
-client.unfocused        #333333 #93a1a1 #fdf6e3 #292d2e
+# class                     border  backgr. text    indicator
+client.focused              #444444 #bf7500 #444444 #ffff70
+# client.focused_inactive   #268bd2 #268bd2 #fdf6e3 #484e50
+# client.unfocused          #333333 #93a1a1 #fdf6e3 #292d2e
 
 # Take out windows name bars 
-for_window [class="^.*"] border pixel 3
-
+for_window [class="^.*"] border pixel 4
 # Resolution (Custom xrand resolution if needed)
 exec bash ~/dotfiles/resolution.sh
 
@@ -221,6 +220,9 @@ exec setxkbmap latam
 
 # Wallpaper
 exec feh --bg-fill /home/salvador/dotfiles/wallpaper.jpg
+
+# Opacity
+exec picom -b -f
 
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
