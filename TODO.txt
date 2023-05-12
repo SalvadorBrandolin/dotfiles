@@ -1,0 +1,21 @@
+-Aprender sobre pipelines: 
+https://m.youtube.com/watch?v=8E8sUNHdzG8&list=PL-p5XmQHB_JREOtBfLdKSswBGYyXwXMUy&index=8&pp=iAQB
+
+-Aprender esta otra mierda que me mando fede (directorios XDG):
+https://youtu.be/yy8RoDSdhIQ
+
+-Configurar zoom default de la terminal
+
+-aprender sobre bindeos (quitar los que no correspondan de i3/conf: sxhkd
+
+- Configurar dmenu (fuente y color de letra)
+
+- Configurar lanzador de dmenu y sioyek
+
+- Configurar rclone
+
+- aprender a configurar una terminal (kitty?)
+
+- aprender sobre la configuracion de X11
+
+- hacer algunos scripts propios

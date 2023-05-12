@@ -211,7 +211,7 @@ client.focused              #444444 #bf7500 #444444 #ffff70
 # client.unfocused          #333333 #93a1a1 #fdf6e3 #292d2e
 
 # Take out windows name bars 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 1
 # Resolution (Custom xrand resolution if needed)
 exec bash ~/dotfiles/resolution.sh
 
