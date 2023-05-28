@@ -5,7 +5,8 @@
 # List of custom launchers:
 apps_list="Zotero
 Sioyek
-Stremio"
+Stremio
+RetroArch"
 
 
 o=$(echo -e "$apps_list" | dmenu -i -fn "Liberation Mono Bold")
@@ -14,4 +15,5 @@ case "$o" in
 	"Zotero") ~/.local/share/Zotero/zotero ;;
 	"Sioyek") ~/.local/bin/Sioyek.AppImage ;;
 	"Stremio") flatpak run com.stremio.Stremio ;;
+	"RetroArch") flatpak run org.libretro.RetroArch ;;
 esac
