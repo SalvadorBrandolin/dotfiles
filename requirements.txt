@@ -20,4 +20,4 @@ screenfetch
 maim
 xclip
 
-mame-tools
+jq
