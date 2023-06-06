@@ -116,6 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# virtualenvwrapper
+source $XDG_HOME_DIR/.local/bin/virtualenvwrapper.sh
 
-VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh

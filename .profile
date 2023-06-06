@@ -1,6 +1,5 @@
 # ~/.profile
 
-
 # XDG paths
 export XDG_CONFIG_HOME="$HOME/.config/"
 export XDG_CACHE_HOME="$HOME/.cache/"
@@ -12,17 +11,15 @@ export XDG_DESKTOP_DIR="$HOME/"
 export XDG_TRASH_DIR="$HOME/.local/share/Trash/"
 export ZDOTDIR="$HOME/.config/shell/zsh"
 
-export PATH="~/.local/bin/xdg-ninja:~/.local/bin/my_scripts:~/.local/bin:$PATH"
-
-# Path for Python virtualenvwrapper
-export WORKON_HOME=${XDG_HOME_DIR}/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-
-# Programs
-export WINEPREFIX="$HOME/installs/winepfx"
+export PATH="$PATH:$HOME/Documentos/programming/julia-1.8.2/bin:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin"
 
 # Zotero variables
-export LOCAL_PAPERS="~/Documentos/zotero"
+export LOCAL_PAPERS="$XDG_HOME_DIR/Documentos/zotero"
+
+# virtualenvwrapper
+export WORKON_HOME=$XDG_HOME_DIR/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
 # Default software to use
 export EDITOR=nvim
