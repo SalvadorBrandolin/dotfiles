@@ -11,7 +11,7 @@ export XDG_DESKTOP_DIR="$HOME/"
 export XDG_TRASH_DIR="$HOME/.local/share/Trash/"
 export ZDOTDIR="$HOME/.config/shell/zsh"
 
-export PATH="$PATH:$HOME/Documentos/programming/julia-1.8.2/bin:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin"
+export PATH="$PATH:$HOME/Documentos/programming/julia/bin:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin"
 
 # Zotero variables
 export LOCAL_PAPERS="$XDG_HOME_DIR/Documentos/zotero"

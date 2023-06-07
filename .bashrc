@@ -117,5 +117,5 @@ if ! shopt -oq posix; then
 fi
 
 # virtualenvwrapper
-source $XDG_HOME_DIR/.local/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper.sh
 
