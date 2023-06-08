@@ -198,17 +198,15 @@ bar {
             statusline #eeeeee
             separator #666666
             #                   border  backgr. text
-            focused_workspace  #444444 #444444 #ffb52a
-            active_workspace   #333333 #5f676a #ffffff
+            focused_workspace  #000000 #444444 #ff9a00
+            active_workspace   #333333 #5f676a #ff9a00
             inactive_workspace #333333 #222222 #888888
             urgent_workspace   #2f343a #900000 #ffffff
         }
 }
 
 # class                     border  backgr. text    indicator
-client.focused              #444444 #bf7500 #444444 #ffff70
-# client.focused_inactive   #268bd2 #268bd2 #fdf6e3 #484e50
-# client.unfocused          #333333 #93a1a1 #fdf6e3 #292d2e
+client.focused              #000000 #ff9a00 #444444 #27a7d8
 
 # Take out windows name bars 
 for_window [class="^.*"] border pixel 1
@@ -224,12 +222,10 @@ exec feh --bg-fill /home/salvador/dotfiles/wallpaper.jpg
 # Opacity
 exec picom -b -f
 
-## Screenshots
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
-bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+# Screenshots
+bindsym $mod+Print exec --no-startup-id maim "/$HOME/Imágenes/$(date)"
+bindsym $mod+Shift+Print exec --no-startup-id maim --select "/$HOME/Imágenes/$(date)"
 
 ## Clipboard Screenshots
-bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
-bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
