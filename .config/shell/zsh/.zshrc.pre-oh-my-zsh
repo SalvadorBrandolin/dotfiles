@@ -1,0 +1,14 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.config/shell/zsh/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -v
+
+zstyle :compinstall filename '$HOME/.config/shell/zsh/.zshrc'
+
+autoload -Uz compinit
+compinit
+
+# Prompt zsh
+autoload -Uz promptinit
+promptinit

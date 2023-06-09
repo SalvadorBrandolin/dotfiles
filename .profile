@@ -13,6 +13,14 @@ export ZDOTDIR="$HOME/.config/shell/zsh"
 
 export PATH="$PATH:$HOME/Documentos/programming/julia/bin:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin"
 
+# Default software to use
+export TERMINAL=kitty
+export EDITOR=nvim
+export VISUAL=nvim
+export BROWSER=firefox
+export SUDO=sudo
+export SHELL=/usr/bin/zsh
+
 # Zotero variables
 export LOCAL_PAPERS="$XDG_HOME_DIR/Documentos/zotero"
 
@@ -21,10 +29,4 @@ export WORKON_HOME=$XDG_HOME_DIR/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
-# Default software to use
-export EDITOR=nvim
-export BROWSER=firefox
-export SUDO=sudo
-
 [ -f ~/.bashrc ] && . ~/.bashrc
-

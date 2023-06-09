@@ -118,4 +118,3 @@ fi
 
 # virtualenvwrapper
 source $HOME/.local/bin/virtualenvwrapper.sh
-
