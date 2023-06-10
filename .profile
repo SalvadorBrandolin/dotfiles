@@ -9,7 +9,10 @@ export XDG_HOME_DIR="$HOME/"
 export XDG_CONFIG_DIR="$HOME/.config/"
 export XDG_DESKTOP_DIR="$HOME/"
 export XDG_TRASH_DIR="$HOME/.local/share/Trash/"
+
 export ZDOTDIR="$HOME/.config/shell/zsh"
+export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
+
 
 export PATH="$PATH:$HOME/Documentos/programming/julia/bin:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin"
 
