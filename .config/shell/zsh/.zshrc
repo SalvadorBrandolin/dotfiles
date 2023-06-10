@@ -2,7 +2,7 @@
 export ZSH="$ZDOTDIR/ohmyzsh"
 
 # Theme
-ZSH_THEME="eastwood"
+ZSH_THEME="dst"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
