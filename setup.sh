@@ -3,6 +3,8 @@
 # Install programs
 xargs sudo apt-get install -y < requirements.txt
 
+chsh -s $(which zsh)
+
 # Install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
