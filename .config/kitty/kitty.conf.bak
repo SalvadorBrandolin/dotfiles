@@ -13,8 +13,8 @@ text_composition_strategy platform
 text_fg_override_threshold 0
 
 # Cursor
-# cursor #cccccc
-# cursor_text_color #111111
+cursor #cccccc
+cursor_text_color #111111
 cursor_shape beam
 cursor_beam_thickness 1.5
 cursor_blink_interval -1
@@ -31,7 +31,7 @@ touch_scroll_multiplier 1.0
 
 # Mouse
 mouse_hide_wait 3.0
-# url_color #27a7d8
+url_color #27a7d8
 url_style double
 open_url_with firefox
 url_prefixes file ftp ftps gemini git gopher http https irc ircs kitty mailto news sftp ssh
@@ -90,28 +90,37 @@ confirm_os_window_close -1
 background_opacity 0.75
 background_image none
 dynamic_background_opacity yes
-# color0 #000000
-# color8 #767676
-# color1 #cc0403
-# color9 #f2201f
-# color2  #19cb00
-# color10 #23fd00
-# color3  #cecb00
-# color11 #fffd00
-# color4  #0d73cc
-# color12 #1a8fff
-# color5  #cb1ed1
-# color13 #fd28ff
-# color6  #0dcdcd
-# color14 #14ffff
-# color7  #dddddd
-# color15 #ffffff
-# mark1_foreground black
-# mark1_background #98d3cb
-# mark2_foreground black
-# mark2_background #f2dcd3
-# mark3_foreground black
-# mark3_background #f274bc
+
+color0 #000000
+color8 #767676
+
+color1 #cc0403
+color9 #f2201f
+
+color2  #19cb00
+color10 #23fd00
+
+color3  #cecb00
+color11 #fffd00
+
+color4  #0d73cc
+color12 #1a8fff
+
+color5  #cb1ed1
+color13 #fd28ff
+
+color6  #0dcdcd
+color14 #14ffff
+
+color7  #dddddd
+color15 #ffffff
+
+mark1_foreground black
+mark1_background #98d3cb
+mark2_foreground black
+mark2_background #f2dcd3
+mark3_foreground black
+mark3_background #f274bc
 
 # Advanced
 shell .
@@ -125,9 +134,3 @@ map ctrl+minus change_font_size all -2.0
 map ctrl+alt+c set_background_opacity -0.1
 map ctrl+alt+z set_background_opacity +0.1
 
-
-
-# BEGIN_KITTY_THEME
-# Tango Dark
-include current-theme.conf
-# END_KITTY_THEME
