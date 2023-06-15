@@ -17,3 +17,4 @@ screenfetch
 maim
 xclip
 xss-lock
+curl
