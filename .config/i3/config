@@ -52,8 +52,9 @@ bindsym $mod+Shift+q kill
 
 # start dmenu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -fn "Liberation Mono Bold - 12"
-bindsym $mod+Shift+d exec ~/.config/i3/custom_dmenu.sh
-bindsym $mod+Shift+w exec ~/.config/i3/workspaces.sh
+bindsym $mod+u exec ~/.config/i3/system_actions.sh
+bindsym $mod+i exec ~/.config/i3/custom_dmenu.sh
+bindsym $mod+o exec ~/.config/i3/workspaces.sh
 
 # start ranger
 bindsym $mod+p exec $TERMINAL -e ranger

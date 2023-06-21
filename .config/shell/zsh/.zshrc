@@ -64,4 +64,4 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.local/bin/virtualenvwrapper.sh
 
 # my scripts
-source $HOME/.local/bin/my_scripts/source_all.sh
+for f in $HOME/.local/bin/my_scripts/*.sh; do source $f; done

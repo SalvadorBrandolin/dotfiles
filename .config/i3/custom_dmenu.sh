@@ -1,6 +1,6 @@
 #!/bin/sh
 # dmenu custom launchers for apps
-# This menu opens with mod+Shift+d
+# This menu opens with mod+i
 
 # List of custom launchers:
 apps_list="Zotero

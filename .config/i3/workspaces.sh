@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # List of most used workspaces
-# Open with mod+Shift+w
+# Open with mod+o
 
 workspaces="ReactorD"
 
