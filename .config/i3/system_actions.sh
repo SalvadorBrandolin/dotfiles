@@ -13,8 +13,8 @@ suspend
 o=$(echo "$actions" | dmenu -i -fn "Liberation Mono Bold")
  
 case "$o" in
-        "safe_shutdown") $TERMINAL safe_shutdown ;;
-        "shutdown") shutdown now ;;
+        "safe_shutdown") $TERMINAL zsh -i -c "safe_shutdown; exec zsh" ;;
+	"shutdown") shutdown now ;;
         "reboot") shutdown -r now ;;
         "suspend") systemctl suspend ;;
 esac

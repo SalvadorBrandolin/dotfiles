@@ -1,8 +1,19 @@
 #!/bin/sh
 
-function safe_shutdown() {
+safe_shutdown() {
     # Check zotero sync
+    echo "Zotero pdf's checking"
+    echo -----------------------------------------------------
     syncrc -r $REMOTE_PAPERS -l $LOCAL_PAPERS -f
+
+    echo -----------------------------------------------------
+
+    # Check dotfiles
+    echo "dotfiles checking"
+    echo -----------------------------------------------------
+    git -C $HOME/dotfiles status
+
+    echo -----------------------------------------------------
 
     # Shutdown
     printf "Shutdown computer? [Y/n]: "

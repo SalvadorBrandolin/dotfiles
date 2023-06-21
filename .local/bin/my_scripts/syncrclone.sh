@@ -1,6 +1,6 @@
 #!/bin/sh
 
-function syncrc() {
+syncrc() {
     # Rclone check and sync with pretty output.
 
     local force=false #don't force bisync by default.
@@ -135,3 +135,4 @@ function syncrc() {
         ;;
     esac
 }
+
