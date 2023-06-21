@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # dmenu custom launchers for apps
 # This menu opens with mod+Shift+d
 
@@ -9,11 +9,11 @@ Stremio
 RetroArch"
 
 
-o=$(echo -e "$apps_list" | dmenu -i -fn "Liberation Mono Bold")
+o=$(echo "$apps_list" | dmenu -i -fn "Liberation Mono Bold")
 
 case "$o" in
 	"Zotero") ~/.local/share/Zotero/zotero ;;
-	"Sioyek") ~/.local/bin/Sioyek.AppImage ;;
+	"Sioyek") ~/.local/share/Sioyek/Sioyek-x86_64.AppImage ;;
 	"Stremio") flatpak run com.stremio.Stremio ;;
 	"RetroArch") flatpak run org.libretro.RetroArch ;;
 esac
