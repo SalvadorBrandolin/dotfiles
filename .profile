@@ -13,7 +13,6 @@ export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
 
 export ZDOTDIR="$HOME/.config/shell/zsh"
 export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
-export HISTFILE="$XDG_STATE_HOME"/bash/history
 
 export PATH="$PATH:$HOME/Documentos/programming/julia/bin:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin:$HOME/.local/kitty.app/bin/"
 
