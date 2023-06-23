@@ -29,7 +29,7 @@ export REMOTE_PAPERS="mi_unidad:salvador/doctorado/biblioteca/zotero"
 export LOCAL_PAPERS="$XDG_HOME_DIR/Documentos/zotero"
 
 # virtualenvwrapper
-export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
+export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$XDG_HOME_DIR/code"
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
