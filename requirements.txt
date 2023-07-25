@@ -3,6 +3,7 @@ i3blocks
 lxappearance
 feh
 picom
+pulseaudio
 wget
 zsh
 kitty
