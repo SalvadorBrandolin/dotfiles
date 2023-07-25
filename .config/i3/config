@@ -228,7 +228,3 @@ bindsym $mod+Shift+Print exec --no-startup-id maim --select "/$HOME/Imágenes/$(
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
-# Volume setting
-bindsym $mod+b exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+1 i3blocks
-bindsym $mod+n exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+1 i3blocks
-bindsym $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -RTMIN+1 i3blocks
