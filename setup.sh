@@ -16,5 +16,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 # Install jill.sh
 cd $HOME/.local/bin && curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/main/jill.sh > jill.sh && cd -
 
+# flatpak packages
+flatpak install avogadro
+
 # GitHub cloning
 git clone https://github.com/b3nj5m1n/xdg-ninja.git ~/.local/bin/xdg-ninja
