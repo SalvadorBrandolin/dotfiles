@@ -8,6 +8,7 @@ dipypr
 ugropy
 dotfiles
 bioactividad2023
+articulo_bioactividad
 "
 
 wp=$(echo "$workspaces" | dmenu -i -fn "Liberation Mono Bold")
@@ -17,5 +18,6 @@ case "$wp" in
 	"ugropy") code ~/code/ugropy ;;
 	"dipypr") code ~/code/dipypr ;;
 	"dotfiles") code ~/dotfiles ;;
-	"bioactividad2023") code ~/code/bioactividad_2023 ;; 
+	"bioactividad2023") code ~/code/bioactividad_2023 ;;
+	"articulo_bioactividad") code ~/code/articulo_bioactividad2023 ;;
 esac
