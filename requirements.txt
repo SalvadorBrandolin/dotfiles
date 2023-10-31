@@ -1,7 +1,11 @@
 arandr
+build-essential
 curl
 dmenu
 feh
+g++
+gcc
+gdb
 htop
 i3
 i3blocks
