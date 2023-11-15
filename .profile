@@ -14,7 +14,8 @@ export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
 export ZDOTDIR="$HOME/.config/shell/zsh"
 export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
 
-export PATH="$PATH:$HOME/packages/julias:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin:$HOME/.local/kitty.app/bin/"
+export PATH="$PATH:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/packages/julias:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin:$HOME/.local/kitty.app/bin/"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 # Default software to use
 export TERMINAL=kitty
