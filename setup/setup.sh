@@ -53,3 +53,6 @@ git clone git@github.com:SalvadorBrandolin/dipypr.git ~/code/dipypr
 # Python setup
 # =============================================================================
 pip install virtualenv virtualenvwrapper
+./setup_virtualenvs/dipypr.sh
+./setup_virtualenvs/ugropy.sh
+./setup_virtualenvs/utility.sh
