@@ -19,6 +19,7 @@ neovim
 p7zip
 pandoc
 picom
+pipx
 pulseaudio
 ranger
 rar

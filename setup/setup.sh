@@ -14,6 +14,7 @@ source ~/.profile
 
 # Install package manager programs
 xargs sudo apt-get install -y < requirements.txt
+pipx ensurepath
 
 # set zsh as default shell
 chsh -s $(which zsh)
