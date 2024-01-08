@@ -2,6 +2,7 @@ arandr
 build-essential
 curl
 dmenu
+firefox
 feh
 g++
 gcc
@@ -18,6 +19,7 @@ nautilus
 neovim
 p7zip
 pandoc
+pavucontrol
 picom
 pipx
 pulseaudio
