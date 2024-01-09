@@ -2,15 +2,17 @@ arandr
 build-essential
 curl
 dmenu
-firefox
 feh
+firefox
 g++
 gcc
 gdb
 gfortran
+guitarix
 htop
 i3
 i3blocks
+jackd2
 kitty
 libreoffice
 lxappearance
@@ -23,6 +25,8 @@ pavucontrol
 picom
 pipx
 pulseaudio
+pulseaudio-module-jack
+qjackctl
 ranger
 rar
 screenfetch
