@@ -4,16 +4,17 @@
 #  Starting
 # =============================================================================
 # Install stow
-sudo apt-get install stow -y
+apt-get install stow -y
 
 # stow config files
-stow . --adopt
+stow ../ --adopt
 
 # .profile
 source ~/.profile
 
 # Install package manager programs
 xargs sudo apt-get install -y < requirements.txt
+
 pipx ensurepath
 
 # set zsh as default shell
@@ -28,15 +29,15 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 # =============================================================================
 # Not apt packages
 # =============================================================================
-# Install jill.sh (Julia -- TODO: need to change to juliaup)
+# Install jill.sh (Julia -- TODO: need to change to juliaup?)
 cd $HOME/.local/bin && curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/main/jill.sh > jill.sh && cd -
 
 # Install kitty
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
 # flatpak packages
-flatpak run com.stremio.Stremio
-flatpak run org.libretro.RetroArch
+flatpak install com.stremio.Stremio
+flatpak install org.libretro.RetroArch
 
 
 # =============================================================================
@@ -53,7 +54,7 @@ git clone git@github.com:SalvadorBrandolin/dipypr.git ~/code/dipypr
 # =============================================================================
 # Python setup
 # =============================================================================
-pip install virtualenv virtualenvwrapper
+pip install --user virtualenv virtualenvwrapper
 ./setup_virtualenvs/dipypr.sh
 ./setup_virtualenvs/ugropy.sh
 ./setup_virtualenvs/utility.sh

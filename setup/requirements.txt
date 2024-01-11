@@ -32,6 +32,8 @@ rar
 screenfetch
 stow
 texlive-full
+tuxguitar
+tuxguitar-jsa
 unrar
 unzip
 wget
