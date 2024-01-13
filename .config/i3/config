@@ -213,6 +213,9 @@ client.focused              #000000 #ff9a00 #444444 #27a7d8
 # Take out windows name bars 
 for_window [class="^.*"] border pixel 0.9
 
+# Suspension time
+exec --no-startup-id xset -dpms s off
+
 # Latam keymap
 exec setxkbmap latam
 
