@@ -34,11 +34,19 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+set $refresh_i3blocks pkill -RTMIN+10 i3blocks
+
+# Multimedia keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3blocks
+
+# My keys
+bindsym $mod+period exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3blocks
+bindsym $mod+comma exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3blocks
+bindsym $mod+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -207,11 +215,11 @@ bar {
         }
 }
 
-# class                     border  backgr. text    indicator
-client.focused              #000000 #ff9a00 #444444 #27a7d8
+# class                        border  backgr. text    indicator
+client.focused                 #000000 #ff9a00 #444444 #27a7d8
 
-# Take out windows name bars 
-for_window [class="^.*"] border pixel 0.9
+# Take out windows name bars and set the width of the border color
+for_window [class="^.*"] border pixel 1
 
 # Suspension time
 exec --no-startup-id xset -dpms s off
@@ -225,7 +233,7 @@ exec feh --bg-fill /home/salvador/dotfiles/wallpaper.jpg
 # Opacity
 exec picom -b -f
 
-# Screenshots
+# Screenshots to images folder
 bindsym $mod+Print exec --no-startup-id maim "/$HOME/Imágenes/$(date)"
 bindsym $mod+Shift+Print exec --no-startup-id maim --select "/$HOME/Imágenes/$(date)"
 
