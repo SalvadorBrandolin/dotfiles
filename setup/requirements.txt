@@ -4,6 +4,7 @@ curl
 dmenu
 feh
 firefox
+fonts-noto-color-emoji
 g++
 gcc
 gdb
