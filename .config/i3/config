@@ -57,15 +57,22 @@ bindsym $mod+Return exec $TERMINAL
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu
+# ! ===========================================================================
+# ! My binds
+# ! ===========================================================================
+# ! start dmenu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -fn "Liberation Mono Bold - 12"
 bindsym $mod+u exec ~/.config/i3/system_actions.sh
 bindsym $mod+i exec ~/.config/i3/custom_dmenu.sh
 bindsym $mod+o exec ~/.config/i3/workspaces.sh
+
+# ! Binds
+bindsym $mod+p exec $TERMINAL -e ranger
 bindsym $mod+n exec nautilus
 
-# start ranger
-bindsym $mod+p exec $TERMINAL -e ranger
+bindsym $mod+F9 exec firefox
+bindsym $mod+F10 exec libreoffice --calc
+# ! ===========================================================================
 
 # change focus
 bindsym $mod+h focus left

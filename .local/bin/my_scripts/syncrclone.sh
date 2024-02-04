@@ -136,3 +136,8 @@ syncrc() {
     esac
 }
 
+sync_zotero(){
+    # Sync zotero files.
+    syncrc -r $REMOTE_PAPERS -l $LOCAL_PAPERS -f
+}
+

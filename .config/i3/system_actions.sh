@@ -7,6 +7,8 @@ actions="safe_shutdown
 shutdown
 reboot
 suspend
+sync_zotero
+myupdate
 "
  
  
@@ -17,4 +19,6 @@ case "$o" in
 	"shutdown") shutdown now ;;
         "reboot") shutdown -r now ;;
         "suspend") systemctl suspend ;;
+        "sync_zotero") $TERMINAL zsh -i -c "sync_zotero; exec zsh" ;;
+        "myupdate") $TERMINAL zsh -i -c "sudo myupdate; exec zsh" ;;
 esac
