@@ -43,8 +43,10 @@ flatpak install org.libretro.RetroArch
 # =============================================================================
 # GitHub cloning
 # =============================================================================
+# xdg ninja
 git clone https://github.com/b3nj5m1n/xdg-ninja.git ~/.local/bin/xdg-ninja
 
+# My code
 mkdir ~/code
 
 git clone git@github.com:SalvadorBrandolin/ugropy.git ~/code/ugropy

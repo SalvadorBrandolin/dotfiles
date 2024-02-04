@@ -19,11 +19,15 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 # Default software to use
 export TERMINAL=kitty
+export TERMCMD=kitty
 export EDITOR=nvim
 export VISUAL=nvim
 export BROWSER=firefox
 export SUDO=sudo
 export SHELL=/usr/bin/zsh
+
+# Ranger
+export RANGER_LOAD_DEFAULT_RC=false
 
 # Zotero variables
 export REMOTE_PAPERS="mi_unidad:salvador/doctorado/biblioteca/zotero"
