@@ -241,9 +241,9 @@ exec feh --bg-fill /home/salvador/dotfiles/wallpaper.jpg
 exec picom -b -f
 
 # Gaps
-gaps inner 3px
-gaps outer 3px
-smart_gaps on
+# gaps inner 3px
+# gaps outer 3px
+# smart_gaps on
 
 # Screenshots to images folder
 bindsym $mod+Print exec --no-startup-id maim "/$HOME/Imágenes/$(date)"
