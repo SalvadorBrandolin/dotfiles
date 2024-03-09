@@ -17,6 +17,14 @@ xargs sudo apt-get install -y < requirements.txt
 
 pipx ensurepath
 
+# Install fortran language server, fprettify and flinter
+# (block of code stolen from FedeBenelli)
+packages=( fortls findent flinter ford fpm fypp )
+    
+for package in ${packages[@]}; do
+    pipx install $package --force
+done
+
 # set zsh as default shell
 chsh -s $(which zsh)
 
