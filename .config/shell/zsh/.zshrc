@@ -59,7 +59,9 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ===== Personal confs =====
+# =============================================================================
+# Personal confs
+# =============================================================================
 # virtualenvwrapper
 source $HOME/.local/bin/virtualenvwrapper.sh
 

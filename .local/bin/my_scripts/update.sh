@@ -4,10 +4,13 @@ myupdate(){
     # apt packages
     apt update && apt upgrade
 
+    # pipx packages
+    pipx --upgrade-all
+
     # flatpak packages
     flatpak update
 
-    # seulf updatable apps
+    # self updatable apps
     rclone selfupdate
     omz update
 
