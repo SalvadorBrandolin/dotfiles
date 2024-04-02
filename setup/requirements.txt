@@ -38,8 +38,10 @@ tuxguitar-jsa
 unrar
 unzip
 wget
+x11-utils
 x11-xserver-utils
 xclip
+xdotool
 xreader
 xss-lock
 zsh

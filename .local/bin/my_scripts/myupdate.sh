@@ -5,7 +5,7 @@ myupdate(){
     apt update && apt upgrade
 
     # pipx packages
-    pipx --upgrade-all
+    pipx upgrade-all
 
     # flatpak packages
     flatpak update

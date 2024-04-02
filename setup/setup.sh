@@ -1,29 +1,19 @@
 #!/bin/sh
 # Code assumes that git has been already configured
 # =============================================================================
-#  Starting
+#  1. Starting
 # =============================================================================
 # Install stow
 apt-get install stow -y
 
 # stow config files
-stow ../ --adopt
+stow ~/dotfiles/ --adopt
 
 # .profile
 source ~/.profile
 
 # Install package manager programs
 xargs sudo apt-get install -y < requirements.txt
-
-pipx ensurepath
-
-# Install fortran language server, fprettify and flinter
-# (block of code stolen from FedeBenelli)
-packages=( fortls findent flinter ford fpm fypp )
-    
-for package in ${packages[@]}; do
-    pipx install $package --force
-done
 
 # set zsh as default shell
 chsh -s $(which zsh)
@@ -35,7 +25,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 
 
 # =============================================================================
-# Not apt packages
+# 2. Not apt packages
 # =============================================================================
 # Install jill.sh (Julia -- TODO: need to change to juliaup?)
 cd $HOME/.local/bin && curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/main/jill.sh > jill.sh && cd -
@@ -47,9 +37,20 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 flatpak install com.stremio.Stremio
 flatpak install org.libretro.RetroArch
 
+# pipx packages
+pipx ensurepath
+
+# Install fortran language server, fprettify and flinter
+# (block of code stolen from FedeBenelli)
+packages=( fortls findent flinter ford fpm fypp )
+    
+for package in ${packages[@]}; do
+    pipx install $package --force
+done
+
 
 # =============================================================================
-# GitHub cloning
+# 3. GitHub cloning
 # =============================================================================
 # xdg ninja
 git clone https://github.com/b3nj5m1n/xdg-ninja.git ~/.local/bin/xdg-ninja
@@ -68,9 +69,10 @@ git clone git@github.com:SalvadorBrandolin/iol.git ~/code/iol
 
 
 # =============================================================================
-# Python setup
+# 4. Python setup
 # =============================================================================
 pip install --user virtualenv virtualenvwrapper
-./setup_virtualenvs/dipypr.sh
-./setup_virtualenvs/ugropy.sh
-./setup_virtualenvs/utility.sh
+
+zsh -i -c "./setup_virtualenvs/dipypr.sh"
+zsh -i -c "./setup_virtualenvs/ugropy.sh"
+zsh -i -c "./setup_virtualenvs/utility.sh"

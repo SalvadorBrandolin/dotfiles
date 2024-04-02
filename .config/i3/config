@@ -33,21 +33,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3blocks pkill -RTMIN+10 i3blocks
-
-# Multimedia keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3blocks
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3blocks
-
-# My keys
-bindsym $mod+period exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3blocks
-bindsym $mod+comma exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3blocks
-bindsym $mod+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks
-
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -60,6 +45,20 @@ bindsym $mod+Shift+q kill
 # ! ===========================================================================
 # ! My binds
 # ! ===========================================================================
+# ! Use pactl to adjust volume in PulseAudio.
+set $refresh_i3blocks pkill -RTMIN+10 i3blocks
+
+# ! Multimedia keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3blocks
+
+# ! My keys
+bindsym $mod+period exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3blocks
+bindsym $mod+comma exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3blocks
+bindsym $mod+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks
+
 # ! start dmenu
 bindsym $mod+d exec --no-startup-id dmenu_run -i -fn "Liberation Mono Bold - 12"
 bindsym $mod+u exec ~/.config/i3/system_actions.sh
@@ -72,7 +71,33 @@ bindsym $mod+n exec nautilus
 
 bindsym $mod+F9 exec firefox
 bindsym $mod+F10 exec libreoffice --calc
+
+# !! Screenshots to images folder
+bindsym $mod+Print exec --no-startup-id maim "/$HOME/Imágenes/$(date)"
+bindsym $mod+Shift+Print exec --no-startup-id maim --select "/$HOME/Imágenes/$(date)"
+
+# !! Clipboard Screenshots
+bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
 # ! ===========================================================================
+# ! My workspaces
+# ! ===========================================================================
+# ! Steam
+# !! focus no: when a new windows opens not focuses it automatically
+# !! focus_follows_mouse no: passing the mosue over the window doesn't focus it
+assign [class="steam"] $ws10
+
+for_window [class="steam"] floating enable
+for_window [class="steam"] move position center
+for_window [class="steam"] focus no
+for_window [class="steam"] focus_follows_mouse no
+
+# Not steam class windows that opens on ws10 moves to ws9 (games)
+for_window [class="^(?!steam)$" workspace=$ws10] move to workspace $ws9
+for_window [class="^(steam_app_).*$" workspace=$ws10] move to workspace $ws9
+# ! ===========================================================================
+
 
 # change focus
 bindsym $mod+h focus left
@@ -135,7 +160,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "Steam"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -147,7 +172,7 @@ bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -159,7 +184,7 @@ bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -194,6 +219,11 @@ mode "resize" {
         bindsym Down resize grow height 1 px or 1 ppt
         bindsym Up resize shrink height 1 px or 1 ppt
         bindsym Right resize grow width 1 px or 1 ppt
+
+        bindsym Shift+Left resize shrink width 10 px or 10 ppt
+        bindsym Shift+Down resize grow height 10 px or 10 ppt
+        bindsym Shift+Up resize shrink height 10 px or 10 ppt
+        bindsym Shift+Right resize grow width 10 px or 10 ppt
         
 	# back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -244,12 +274,4 @@ exec picom -b -f
 # gaps inner 3px
 # gaps outer 3px
 # smart_gaps on
-
-# Screenshots to images folder
-bindsym $mod+Print exec --no-startup-id maim "/$HOME/Imágenes/$(date)"
-bindsym $mod+Shift+Print exec --no-startup-id maim --select "/$HOME/Imágenes/$(date)"
-
-# Clipboard Screenshots
-bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
-bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
