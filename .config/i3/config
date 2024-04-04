@@ -85,7 +85,7 @@ bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipbo
 # ! ===========================================================================
 # ! Steam
 # !! focus no: when a new windows opens not focuses it automatically
-# !! focus_follows_mouse no: passing the mosue over the window doesn't focus it
+# !! focus_follows_mouse no: passing the mouse over the window doesn't focus it
 assign [class="steam"] $ws10
 
 for_window [class="steam"] floating enable
@@ -94,10 +94,9 @@ for_window [class="steam"] focus no
 for_window [class="steam"] focus_follows_mouse no
 
 # Not steam class windows that opens on ws10 moves to ws9 (games)
-for_window [class="^(?!steam)$" workspace=$ws10] move to workspace $ws9
+for_window [class="^(?!steam).*$" workspace=$ws10] move to workspace $ws9
 for_window [class="^(steam_app_).*$" workspace=$ws10] move to workspace $ws9
 # ! ===========================================================================
-
 
 # change focus
 bindsym $mod+h focus left
