@@ -54,5 +54,8 @@ export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
 export JULIA_HISTORY="$XDG_DATA_HOME/julia/logs/repl_history.jl"
 export JULIAUP_DEPOT_PATH="$XDG_DATA_HOME/julia"
 
+# Rust
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+
 
 [ -f ~/.bashrc ] && . ~/.bashrc
