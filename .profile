@@ -3,14 +3,14 @@
 # =============================================================================
 # XDG paths
 # =============================================================================
-export XDG_CONFIG_HOME="$HOME/.config/"
-export XDG_CACHE_HOME="$HOME/.cache/"
-export XDG_DATA_HOME="$HOME/.local/share/"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
-export XDG_HOME_DIR="$HOME/"
-export XDG_CONFIG_DIR="$HOME/.config/"
-export XDG_DESKTOP_DIR="$HOME/"
-export XDG_TRASH_DIR="$HOME/.local/share/Trash/"
+export XDG_HOME_DIR="$HOME"
+export XDG_CONFIG_DIR="$HOME/.config"
+export XDG_DESKTOP_DIR="$HOME"
+export XDG_TRASH_DIR="$HOME/.local/share/Trash"
 
 # =============================================================================
 # Default software to use

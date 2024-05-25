@@ -2,7 +2,7 @@
 export ZSH="$ZDOTDIR/ohmyzsh"
 
 # Theme
-ZSH_THEME="minimal"
+ZSH_THEME="minimal" # set by `omz`
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
