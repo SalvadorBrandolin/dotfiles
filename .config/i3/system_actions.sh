@@ -20,5 +20,5 @@ case "$o" in
         "reboot") shutdown -r now ;;
         "suspend") systemctl suspend ;;
         "sync_zotero") $TERMINAL zsh -i -c "sync_zotero; exec zsh" ;;
-        "myupdate") $TERMINAL zsh -i -c "sudo myupdate; exec zsh" ;;
+        "myupdate") $TERMINAL zsh -i -c "myupdate; exec zsh" ;;
 esac

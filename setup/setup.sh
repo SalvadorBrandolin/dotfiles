@@ -57,7 +57,6 @@ git clone https://github.com/b3nj5m1n/xdg-ninja.git ~/.local/bin/xdg-ninja
 
 # ranger plugins
 mkdir ~/.config/ranger/plugins
-
 git clone https://github.com/SL-RU/ranger_udisk_menu.git ~/.config/ranger/plugins/ranger_udisk_menu
 
 # My code

@@ -17,4 +17,6 @@ myupdate(){
     # git repositories
     cd ~/.local/bin/xdg-ninja && git pull
     cd ~/.config/ranger/plugins/ranger_udisk_menu && git pull
+    cd $ZSH_CUSTOM/plugins/zsh-syntax-highlighting && git pull
+    cd $ZSH_CUSTOM/plugins/zsh-autosuggestions && git pull
 } 
