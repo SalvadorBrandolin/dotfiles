@@ -15,7 +15,7 @@ apt update
 apt install -y stow
 
 # stow config files
-stow --dir="$DOTFILES_DIR" --target="~/" --adopt
+stow --dir="$DOTFILES_DIR" --target="~" --adopt
 
 # .profile
 source ~/.profile
