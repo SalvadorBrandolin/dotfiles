@@ -18,5 +18,5 @@ echo -e "${green} Installing flatpak dependencies"
 echo -e "${green}===============================================================================$normal"
 
 # flatpak packages
-flatpak flatpak install flathub com.stremio.Stremio
-flatpak flatpak install flathub org.libretro.RetroArch
+flatpak install -y flathub com.stremio.Stremio
+flatpak install -y flathub org.libretro.RetroArch
