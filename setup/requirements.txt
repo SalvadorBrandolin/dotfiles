@@ -4,6 +4,7 @@ curl
 dmenu
 feh
 firefox
+flatpak
 fonts-noto-color-emoji
 g++
 gcc
