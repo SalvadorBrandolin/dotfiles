@@ -11,7 +11,7 @@ cd $HOME/dotfiles
 stow . --adopt
 
 # .profile
-source ~/.profile
+source $HOME/.profile
 
 sudo bash ~/dotfiles/setup/2-root_dependencies.sh
 bash ~/dotfiles/setup/3-no_root_dependencies.sh

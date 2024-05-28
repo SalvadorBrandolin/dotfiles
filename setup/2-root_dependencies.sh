@@ -3,7 +3,7 @@
 set -e
 
 # Install package manager programs
-xargs apt install -y < $DOTFILES_DIR/setup/requirements.txt
+xargs apt install -y < /home/$SUDO_USER/dotfiles/setup/requirements.txt
 
 # flatpak packages
 flatpak install com.stremio.Stremio
