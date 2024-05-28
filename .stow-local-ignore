@@ -1,9 +1,11 @@
+__pycache__
+
 /.git
+/.github
 /.gitignore
 /README.md
 /requirements.txt
-/wallpaper.jpg
-/TODO.txt
 /setup
-
-__pycache__
+/tests
+/TODO.txt
+/wallpaper.jpg
