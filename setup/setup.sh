@@ -3,14 +3,15 @@
 # =============================================================================
 #  1. Starting
 # =============================================================================
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
 # dotfiles directory path
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../"
 
 # Install stow
-apt install stow -y
-
-# First update
 apt update
+apt install -y stow
 
 # stow config files
 stow --dir="$DOTFILES_DIR" --target="$HOME" --adopt
