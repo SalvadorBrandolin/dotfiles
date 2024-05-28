@@ -11,14 +11,14 @@ apt update
 apt install -y stow
 
 # stow config files
-cd $HOME/dotfiles
+cd ~/dotfiles
 stow . --adopt
 
 # .profile
-source $HOME/.profile
+source ~/.profile
 
 # Install package manager programs
-xargs apt install -y < $HOME/dotfiles/setup/requirements.txt
+xargs apt install -y < ~/dotfiles/setup/requirements.txt
 
 # set zsh as default shell
 chsh -s $(which zsh)
