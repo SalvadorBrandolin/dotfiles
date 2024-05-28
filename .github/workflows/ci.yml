@@ -14,9 +14,12 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.x
+    
+    - name: Copy dotfiles into HOME
+      run: cp -r . ~/dotfiles
 
     - name: Run setup
-      run: sudo bash setup/setup.sh
+      run: sudo bash ~/dotfiles/setup/setup.sh
 
     - name: Run tests
       run: ./tests/runtests.sh

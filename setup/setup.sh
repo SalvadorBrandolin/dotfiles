@@ -6,22 +6,19 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
-# dotfiles directory path
-DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../"
-DOTFILES_DIR="$(cd "$DOTFILES_DIR" && pwd)"
-
 # Install stow
 apt update
 apt install -y stow
 
 # stow config files
-stow --dir="$DOTFILES_DIR" --target="~" --adopt
+cd $HOME/dotfiles
+stow . --adopt
 
 # .profile
-source ~/.profile
+source $HOME/.profile
 
 # Install package manager programs
-xargs apt install -y < $DOTFILES_DIR/setup/requirements.txt
+xargs apt install -y < $HOME/dotfiles/setup/requirements.txt
 
 # set zsh as default shell
 chsh -s $(which zsh)
