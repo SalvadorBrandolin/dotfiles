@@ -2,7 +2,13 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
-bash ~/dotfiles/setup/1-stow.sh
+# Install stow
+sudo apt update
+sudo apt install -y stow
+
+# stow config files
+cd $HOME/dotfiles
+stow . --adopt
 
 # .profile
 source ~/.profile
