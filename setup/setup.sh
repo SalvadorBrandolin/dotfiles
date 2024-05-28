@@ -1,19 +1,25 @@
-#!/bin/sh
-# Code assumes that git has been already configured
+#!/bin/bash
+# Code assumes that git has been already configured (ssh-key)
 # =============================================================================
 #  1. Starting
 # =============================================================================
+# dotfiles directory path
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../"
+
 # Install stow
 apt-get install stow -y
 
+# First update
+sudo apt-get update
+
 # stow config files
-stow ~/dotfiles/ --adopt
+stow --dir="$DOTFILES_DIR" --target="$HOME" --adopt
 
 # .profile
 source ~/.profile
 
 # Install package manager programs
-xargs sudo apt-get install -y < requirements.txt
+xargs sudo apt-get install -y < $DOTFILES_DIR/setup/requirements.txt
 
 # set zsh as default shell
 chsh -s $(which zsh)
@@ -22,7 +28,6 @@ chsh -s $(which zsh)
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
 
 # =============================================================================
 # 2. Not apt packages
@@ -48,7 +53,6 @@ for package in ${packages[@]}; do
     pipx install $package --force
 done
 
-
 # =============================================================================
 # 3. GitHub cloning
 # =============================================================================
@@ -65,7 +69,6 @@ mkdir ~/code
 git clone git@github.com:SalvadorBrandolin/ugropy.git ~/code/ugropy
 git clone git@github.com:SalvadorBrandolin/dipypr.git ~/code/dipypr
 git clone git@github.com:SalvadorBrandolin/iol.git ~/code/iol
-
 
 # =============================================================================
 # 4. Python setup
