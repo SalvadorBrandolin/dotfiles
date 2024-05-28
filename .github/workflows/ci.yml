@@ -22,8 +22,7 @@ jobs:
       run: cp -r . ~/dotfiles
     
     - name: Run setup
-      working-directory: ~/dotfiles/setup
-      run: bash setup.sh
+      run: bash ~/dotfiles/setup/setup.sh
 
     - name: Run tests
       run: ./tests/runtests.sh
