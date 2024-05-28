@@ -15,11 +15,15 @@ jobs:
       with:
         python-version: 3.x
     
+    - name: Create dotfiles directory
+      run: mkdir ~/dotfiles
+    
     - name: Copy dotfiles into HOME
       run: cp -r . ~/dotfiles
-
+    
     - name: Run setup
-      run: bash ~/dotfiles/setup/setup.sh
+      working-directory: ~/dotfiles/setup
+      run: bash setup.sh
 
     - name: Run tests
       run: ./tests/runtests.sh
