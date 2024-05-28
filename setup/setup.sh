@@ -6,19 +6,21 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
+# dotfiles directory path
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../"
+
 # Install stow
 apt update
 apt install -y stow
 
 # stow config files
-cd ~/dotfiles
-stow . --adopt
+stow --dir="$DOTFILES_DIR" --target="~$SUDO_USER" --adopt
 
 # .profile
-source ~/.profile
+source ~$SUDO_USER/.profile
 
 # Install package manager programs
-xargs apt install -y < ~/dotfiles/setup/requirements.txt
+xargs apt install -y < $DOTFILES_DIR/setup/requirements.txt
 
 # set zsh as default shell
 chsh -s $(which zsh)
