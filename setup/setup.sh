@@ -14,10 +14,10 @@ apt update
 apt install -y stow
 
 # stow config files
-stow --dir="$DOTFILES_DIR" --target="~$SUDO_USER" --adopt
+stow --dir="$DOTFILES_DIR" --target="/home/$SUDO_USER" --adopt
 
 # .profile
-source ~$SUDO_USER/.profile
+source /home/$SUDO_USER/.profile
 
 # Install package manager programs
 xargs apt install -y < $DOTFILES_DIR/setup/requirements.txt
