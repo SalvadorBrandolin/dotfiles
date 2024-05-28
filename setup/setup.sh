@@ -8,13 +8,14 @@ set -e
 
 # dotfiles directory path
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../"
+DOTFILES_DIR="$(cd "$DOTFILES_DIR" && pwd)"
 
 # Install stow
 apt update
 apt install -y stow
 
 # stow config files
-stow --dir="$DOTFILES_DIR" --target="$HOME" --adopt
+stow --dir="$DOTFILES_DIR" --target="~/" --adopt
 
 # .profile
 source ~/.profile
