@@ -7,10 +7,10 @@
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../"
 
 # Install stow
-apt-get install stow -y
+apt install stow -y
 
 # First update
-sudo apt-get update
+apt update
 
 # stow config files
 stow --dir="$DOTFILES_DIR" --target="$HOME" --adopt
@@ -19,7 +19,7 @@ stow --dir="$DOTFILES_DIR" --target="$HOME" --adopt
 source ~/.profile
 
 # Install package manager programs
-xargs sudo apt-get install -y < $DOTFILES_DIR/setup/requirements.txt
+xargs apt install -y < $DOTFILES_DIR/setup/requirements.txt
 
 # set zsh as default shell
 chsh -s $(which zsh)

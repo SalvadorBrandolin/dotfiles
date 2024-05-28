@@ -16,7 +16,7 @@ jobs:
         python-version: 3.x
 
     - name: Run setup
-      run: ./setup/setup.sh
+      run: sudo bash setup/setup.sh
 
     - name: Run tests
       run: ./tests/runtests.sh
