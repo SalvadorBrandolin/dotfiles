@@ -27,6 +27,12 @@ jobs:
     
     - name: Copy dotfiles into HOME
       run: cp -r . ~/dotfiles
+
+    - name: Stow
+      run: |
+        sudo apt install -y stow
+        cd ~/dotfiles
+        stow . --adopt
     
     - name: Run setup
       run: bash ~/dotfiles/setup/setup.sh

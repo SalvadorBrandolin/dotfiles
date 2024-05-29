@@ -17,7 +17,7 @@ echo -e "Source profile (just in case)"
 echo -e "====================================================================="
 echo -e ${normal}
 
-bash ~/dotfiles/setup/profile_variables.sh
+source ~/.profile
 
 
 echo -e ${green}
