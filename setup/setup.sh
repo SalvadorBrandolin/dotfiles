@@ -21,7 +21,7 @@ echo -e "${green}===============================================================
 echo -e "${green} Source profile"
 echo -e "${green}===============================================================================$normal"
 
-source ~/dotfiles/.profile
+bash ~/dotfiles/setup/profile_variables.sh
 
 # =============================================================================
 # Root dependencies
@@ -56,9 +56,6 @@ echo -e "${green} Github cloning"
 echo -e "${green}===============================================================================$normal"
 
 # zsh plugins
-# ZSH
-export ZDOTDIR="$HOME/.config/shell/zsh"
-export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
@@ -74,8 +71,6 @@ git clone https://github.com/SL-RU/ranger_udisk_menu.git ~/.config/ranger/plugin
 mkdir ~/code
 
 git clone git@github.com:SalvadorBrandolin/ugropy.git ~/code/ugropy
-git clone git@github.com:SalvadorBrandolin/dipypr.git ~/code/dipypr
-git clone git@github.com:SalvadorBrandolin/iol.git ~/code/iol
 
 
 echo -e "${green}==============================================================================="
@@ -84,9 +79,7 @@ echo -e "${green}===============================================================
 
 pip install --user virtualenv virtualenvwrapper
 
-zsh -i -c "./setup_virtualenvs/dipypr.sh"
 zsh -i -c "./setup_virtualenvs/ugropy.sh"
-zsh -i -c "./setup_virtualenvs/utility.sh"
 
 # set zsh as default shell
 chsh -s $(which zsh)
