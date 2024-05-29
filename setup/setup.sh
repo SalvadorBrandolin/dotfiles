@@ -17,8 +17,6 @@ sudo apt install -y stow
 cd ~/dotfiles
 stow . --adopt
 
-ls -la ~/
-
 echo -e "${green}==============================================================================="
 echo -e "${green} Source profile"
 echo -e "${green}===============================================================================$normal"
@@ -58,9 +56,10 @@ echo -e "${green} Github cloning"
 echo -e "${green}===============================================================================$normal"
 
 # zsh plugins
-mkdir "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+# ZSH
+export ZDOTDIR="$HOME/.config/shell/zsh"
+export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-mkdir "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 # xdg ninja
