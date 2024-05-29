@@ -12,9 +12,8 @@ sudo apt update
 echo -e "${green}==============================================================================="
 echo -e "${green} Installing stow and stowing"
 echo -e "${green}===============================================================================$normal"
-sudo apt install -y stow
 
-# stow config files
+sudo apt install -y stow
 cd $HOME/dotfiles
 stow . --adopt
 
@@ -22,10 +21,13 @@ stow . --adopt
 echo -e "${green}==============================================================================="
 echo -e "${green} Source profile"
 echo -e "${green}===============================================================================$normal"
-# .profile
+
 source $HOME/.profile
 
+
+# =============================================================================
 # Root dependencies
+# =============================================================================
 sudo bash ~/dotfiles/setup/root_dependencies.sh
 
 
@@ -50,9 +52,11 @@ for package in ${packages[@]}; do
     pipx install $package --force
 done
 
+
 echo -e "${green}==============================================================================="
 echo -e "${green} Github cloning"
 echo -e "${green}===============================================================================$normal"
+
 # zsh plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
@@ -75,6 +79,7 @@ git clone git@github.com:SalvadorBrandolin/iol.git ~/code/iol
 echo -e "${green}==============================================================================="
 echo -e "${green} Python setup"
 echo -e "${green}===============================================================================$normal"
+
 pip install --user virtualenv virtualenvwrapper
 
 zsh -i -c "./setup_virtualenvs/dipypr.sh"
