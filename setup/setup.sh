@@ -15,6 +15,8 @@ echo -e "${green}===============================================================
 
 sudo apt install -y stow
 cd ~/dotfiles
+echo "Current directory: $(pwd)"
+cat ./.profile
 stow . --adopt
 
 
