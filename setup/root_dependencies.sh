@@ -4,18 +4,22 @@ set -e
 
 green="\e[32m"
 normal="\e[0m"
-echo -e "${green}==============================================================================="
-echo -e "${green} Installing apt dependencies"
-echo -e "${green}===============================================================================$normal"
+
+echo -e ${green}
+echo -e "====================================================================="
+echo -e "Installing apt dependencies"
+echo -e "====================================================================="
+echo -e ${normal}
 
 # Install package manager programs
 xargs apt install -y < /home/$SUDO_USER/dotfiles/setup/requirements.txt
 
-green="\e[32m"
-normal="\e[0m"
-echo -e "${green}==============================================================================="
-echo -e "${green} Installing flatpak dependencies"
-echo -e "${green}===============================================================================$normal"
+
+echo -e ${green}
+echo -e "====================================================================="
+echo -e "Installing flatpak dependencies"
+echo -e "====================================================================="
+echo -e ${normal}
 
 # flatpak packages
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
