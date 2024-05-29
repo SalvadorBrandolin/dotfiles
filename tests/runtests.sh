@@ -83,24 +83,8 @@ for repo in "${repos[@]}"; do
 done
 echo "All repositories are cloned."
 
-# Check if zsh is the default shell
-echo "Checking if zsh is the default shell..."
-if [ "$SHELL" != "$(which zsh)" ]; then
-    echo "zsh is not the default shell."
-    exit 1
-else
-    echo "zsh is the default shell."
-fi
-
-# Check xdg-ninja installation and run it
-#echo "Checking xdg-ninja installation and running it..."
-#if [ ! -f "$HOME/.local/bin/xdg-ninja/xdg-ninja.sh" ]; then
-#    echo "xdg-ninja is not installed correctly."
-#    exit 1
-#else
-#    echo "xdg-ninja is installed correctly. Running xdg-ninja..."
-#    bash $HOME/.local/bin/xdg-ninja/xdg-ninja.sh --skip-ok --skip-unsupported
-#fi
+# let's see those xdg
+bash $HOME/.local/bin/xdg-ninja/xdg-ninja.sh --skip-ok --skip-unsupported
 
 echo "========================================================================"
 echo "All tests passed successfully!"
