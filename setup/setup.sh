@@ -15,17 +15,15 @@ echo -e "${green}===============================================================
 
 sudo apt install -y stow
 cd ~/dotfiles
-echo "Current directory: $(pwd)"
-cat ./.profile
 stow . --adopt
 
+ls -la ~/
 
 echo -e "${green}==============================================================================="
 echo -e "${green} Source profile"
 echo -e "${green}===============================================================================$normal"
 
 source ~/.profile
-cat ~/.profile
 
 # =============================================================================
 # Root dependencies
