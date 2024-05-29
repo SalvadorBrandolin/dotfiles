@@ -106,3 +106,5 @@ echo -e ${normal}
 
 # set zsh as default shell
 sudo chsh -s $(which zsh)
+
+sudo apt update && sudo apt upgrade
