@@ -14,7 +14,7 @@ echo -e "${green} Installing stow and stowing"
 echo -e "${green}===============================================================================$normal"
 
 sudo apt install -y stow
-cd $HOME/dotfiles
+cd ~/dotfiles
 stow . --adopt
 
 
@@ -22,7 +22,8 @@ echo -e "${green}===============================================================
 echo -e "${green} Source profile"
 echo -e "${green}===============================================================================$normal"
 
-source $HOME/.profile
+source ~/.profile
+cat ~/.profile
 
 # =============================================================================
 # Root dependencies
