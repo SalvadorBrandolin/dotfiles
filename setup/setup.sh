@@ -4,7 +4,6 @@ set -e
 
 green="\e[32m"
 normal="\e[0m"
-
 # Install stow
 sudo apt update
 
