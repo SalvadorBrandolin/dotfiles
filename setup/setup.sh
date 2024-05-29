@@ -54,6 +54,8 @@ echo -e "${green}===============================================================
 echo -e "${green} Github cloning"
 echo -e "${green}===============================================================================$normal"
 
+ZSH_CUSTOM="$HOME/.config/shell/zsh/ohmyzsh/custom"
+
 # zsh plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
