@@ -11,7 +11,7 @@ set -e
 # =============================================================================
 ZSH_CUSTOM="$HOME/.config/shell/zsh/ohmyzsh/custom"
 ZDOTDIR="$HOME/.config/shell/zsh"
-ZSH="$ZDOTDIR/ohmyzsh"
+export ZSH="$ZDOTDIR/ohmyzsh"
 
 green="\e[32m"
 normal="\e[0m"
@@ -45,7 +45,7 @@ echo -e "====================================================================="
 echo -e ${normal}
 
 # oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+zsh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 # Install jill.sh (Julia -- TODO: need to change to juliaup?)
 cd $HOME/.local/bin && curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/main/jill.sh > jill.sh && cd -
