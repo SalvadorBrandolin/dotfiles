@@ -82,7 +82,8 @@ echo -e "${green}===============================================================
 
 pip install --user virtualenv virtualenvwrapper
 
-zsh -i -c "./setup_virtualenvs/ugropy.sh"
+zsh -i -c "~/dotfiles/setup/setup_virtualenvs/ugropy.sh"
+zsh -i -c "~/dotfiles/setup/setup_virtualenvs/ugropy.sh"
 
 # set zsh as default shell
 chsh -s $(which zsh)
