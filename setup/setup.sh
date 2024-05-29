@@ -6,9 +6,18 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
+# =============================================================================
+# Variables
+# =============================================================================
+ZSH_CUSTOM="$HOME/.config/shell/zsh/ohmyzsh/custom"
+ZDOTDIR="$HOME/.config/shell/zsh"
+ZSH="$ZDOTDIR/ohmyzsh"
+
 green="\e[32m"
 normal="\e[0m"
-
+# =============================================================================
+# Begin installation
+# =============================================================================
 sudo apt update
 
 echo -e ${green}
@@ -59,8 +68,6 @@ echo -e "====================================================================="
 echo -e ${normal}
 
 # zsh plugins
-ZSH_CUSTOM="$HOME/.config/shell/zsh/ohmyzsh/custom"
-
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
@@ -88,7 +95,9 @@ echo -e ${normal}
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 
-sudo apt install python3.10 python3.11 python3.12
+sudo apt install python3.10 python3.10-venv
+sudo apt install python3.11 python3.11-venv
+sudo apt install python3.12 python3.12-venv
 
 # Virtualenvs
 pip install --user virtualenv virtualenvwrapper

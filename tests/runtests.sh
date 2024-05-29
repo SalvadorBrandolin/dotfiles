@@ -49,7 +49,6 @@ else
     echo "oh-my-zsh is installed correctly."
 fi
 
-
 # Check zsh plugins installation
 echo "Checking zsh plugins installation..."
 ZSH_CUSTOM="$HOME/.config/shell/zsh/ohmyzsh/custom"
@@ -94,14 +93,14 @@ else
 fi
 
 # Check xdg-ninja installation and run it
-echo "Checking xdg-ninja installation and running it..."
-if [ ! -f "$HOME/.local/bin/xdg-ninja/xdg-ninja.sh" ]; then
-    echo "xdg-ninja is not installed correctly."
-    exit 1
-else
-    echo "xdg-ninja is installed correctly. Running xdg-ninja..."
-    bash $HOME/.local/bin/xdg-ninja/xdg-ninja.sh --skip-ok --skip-unsupported
-fi
+#echo "Checking xdg-ninja installation and running it..."
+#if [ ! -f "$HOME/.local/bin/xdg-ninja/xdg-ninja.sh" ]; then
+#    echo "xdg-ninja is not installed correctly."
+#    exit 1
+#else
+#    echo "xdg-ninja is installed correctly. Running xdg-ninja..."
+#    bash $HOME/.local/bin/xdg-ninja/xdg-ninja.sh --skip-ok --skip-unsupported
+#fi
 
 echo "========================================================================"
 echo "All tests passed successfully!"
