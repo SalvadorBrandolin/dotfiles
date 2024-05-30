@@ -9,63 +9,27 @@ set -e
 # =============================================================================
 # Variables
 # =============================================================================
-# XDG paths
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
-export XDG_HOME_DIR="$HOME"
-export XDG_CONFIG_DIR="$HOME/.config"
-export XDG_DESKTOP_DIR="$HOME"
-export XDG_TRASH_DIR="$HOME/.local/share/Trash"
-
-# nvm
-export NVM_DIR="$XDG_DATA_HOME/nvm"
-
-#ghcup
-export GHCUP_USE_XDG_DIRS=true
-
-# dotnet
-export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
-
-# Docker
-export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
-
-# Wine
-export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
-
-# ZSH
+export ZSH="$ZDOTDIR/ohmyzsh"
+export ZSH_CUSTOM="$HOME/.config/shell/zsh/ohmyzsh/custom"
 export ZDOTDIR="$HOME/.config/shell/zsh"
-export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
 
-# Ranger
-export RANGER_LOAD_DEFAULT_RC=false
-
-# Zotero variables
-export REMOTE_PAPERS="mi_unidad:salvador/doctorado/biblioteca/zotero"
-export LOCAL_PAPERS="$XDG_HOME_DIR/Documentos/zotero"
-
-# virtualenvwrapper
-export WORKON_HOME="$HOME/.virtualenvs"
-export PROJECT_HOME="$XDG_HOME_DIR/code"
-export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
-
-# Julia
-export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
-export JULIA_HISTORY="$XDG_DATA_HOME/julia/logs/repl_history.jl"
-export JULIAUP_DEPOT_PATH="$XDG_DATA_HOME/julia"
-
-# Rust
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-
-# Colors
+# colors
 green="\e[32m"
 normal="\e[0m"
 
 # =============================================================================
-# Begin installation
+# Begin setup
 # =============================================================================
 sudo apt update
+
+echo -e ${green}
+echo -e "====================================================================="
+echo -e "Source profile (just in case)"
+echo -e "====================================================================="
+echo -e ${normal}
+
+source ~/.profile
+
 
 echo -e ${green}
 echo -e "====================================================================="
@@ -83,7 +47,7 @@ echo -e "====================================================================="
 echo -e ${normal}
 
 # oh-my-zsh
-zsh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 # Install jill.sh (Julia -- TODO: need to change to juliaup?)
 cd $HOME/.local/bin && curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/main/jill.sh > jill.sh && cd -
@@ -133,13 +97,10 @@ echo -e ${normal}
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 
-sudo apt install python3.10 python3.10-venv
-sudo apt install python3.11 python3.11-venv
-sudo apt install python3.12 python3.12-venv
+sudo apt install python3.10 python3.11 python3.12
 
 # Virtualenvs
 pip install --user virtualenv virtualenvwrapper
-source $HOME/.local/bin/virtualenvwrapper.sh
 
 zsh -i -c "~/dotfiles/setup/setup_virtualenvs/ugropy.sh"
 zsh -i -c "~/dotfiles/setup/setup_virtualenvs/dipypr.sh"
@@ -158,6 +119,21 @@ sudo chsh -s $(which zsh)
 sudo apt update && sudo apt upgrade
 
 # usually bad positioned xdg
+# nvm
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+
+#ghcup
+export GHCUP_USE_XDG_DIRS=true
+
+# dotnet
+export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
+
+# Docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+
+# Rust
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+
 # .cargo
 if [ -e "$HOME/.cargo" ]; then
     if [ ! -d "$CARGO_HOME" ]; then
