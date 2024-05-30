@@ -36,11 +36,11 @@ jobs:
     
     - name: Run setup
       run: |
-        source ~/dotfiles/.profile
+        bash -c ~/dotfiles/.profile
         echo "================================================================"
         env
         echo "================================================================"
-        source ~/dotfiles/setup/setup.sh
+        bash -c ~/dotfiles/setup/setup.sh
 
     - name: Run tests
       run: ./tests/runtests.sh
