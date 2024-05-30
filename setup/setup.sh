@@ -6,13 +6,6 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
-# =============================================================================
-# Variables
-# =============================================================================
-export ZSH="$ZDOTDIR/ohmyzsh"
-export ZSH_CUSTOM="$HOME/.config/shell/zsh/ohmyzsh/custom"
-export ZDOTDIR="$HOME/.config/shell/zsh"
-
 # colors
 green="\e[32m"
 normal="\e[0m"
@@ -119,21 +112,6 @@ sudo chsh -s $(which zsh)
 sudo apt update && sudo apt upgrade
 
 # usually bad positioned xdg
-# nvm
-export NVM_DIR="$XDG_DATA_HOME/nvm"
-
-#ghcup
-export GHCUP_USE_XDG_DIRS=true
-
-# dotnet
-export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
-
-# Docker
-export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
-
-# Rust
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-
 # .cargo
 if [ -e "$HOME/.cargo" ]; then
     if [ ! -d "$CARGO_HOME" ]; then
