@@ -34,11 +34,13 @@ jobs:
         cd ~/dotfiles
         stow . --adopt
     
-    - name: Source .profile
-      run: source ~/dotfiles/.profile
-    
     - name: Run setup
-      run: source ~/dotfiles/setup/setup.sh
+      run: |
+        source ~/dotfiles/.profile
+        echo "================================================================"
+        env
+        echo "================================================================"
+        source ~/dotfiles/setup/setup.sh
 
     - name: Run tests
       run: ./tests/runtests.sh
