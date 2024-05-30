@@ -3,7 +3,7 @@ name: CI-setup
 on: [push, pull_request]
 
 jobs:
-  test:
+  test-setup:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,6 +33,9 @@ jobs:
         sudo apt install -y stow
         cd ~/dotfiles
         stow . --adopt
+    
+    - name: Source .profile
+      run: source ~/dotfiles/.profile
     
     - name: Run setup
       run: source ~/dotfiles/setup/setup.sh
