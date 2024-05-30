@@ -26,16 +26,28 @@ export SHELL="/usr/bin/zsh"
 # =============================================================================
 # Variables
 # =============================================================================
+# Paths
+export PATH="$PATH:/usr/local/include:/usr/include:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/packages/julias:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin:$HOME/.local/kitty.app/bin/"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
+
+# nvm
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+
+#ghcup
+export GHCUP_USE_XDG_DIRS=true
+
+# dotnet
+export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
+
+# Docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+
 # Wine
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
 # ZSH
 export ZDOTDIR="$HOME/.config/shell/zsh"
 export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
-
-# Paths
-export PATH="$PATH:/usr/local/include:/usr/include:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/packages/julias:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin:$HOME/.local/kitty.app/bin/"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 # Ranger
 export RANGER_LOAD_DEFAULT_RC=false
@@ -56,6 +68,5 @@ export JULIAUP_DEPOT_PATH="$XDG_DATA_HOME/julia"
 
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
-
 
 [ -f ~/.bashrc ] && . ~/.bashrc

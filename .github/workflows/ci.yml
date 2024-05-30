@@ -35,7 +35,7 @@ jobs:
         stow . --adopt
     
     - name: Run setup
-      run: bash ~/dotfiles/setup/setup.sh
+      run: source ~/dotfiles/setup/setup.sh
 
     - name: Run tests
       run: ./tests/runtests.sh
