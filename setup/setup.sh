@@ -139,6 +139,7 @@ sudo apt install python3.12 python3.12-venv
 
 # Virtualenvs
 pip install --user virtualenv virtualenvwrapper
+source $HOME/.local/bin/virtualenvwrapper.sh
 
 zsh -i -c "~/dotfiles/setup/setup_virtualenvs/ugropy.sh"
 zsh -i -c "~/dotfiles/setup/setup_virtualenvs/dipypr.sh"
