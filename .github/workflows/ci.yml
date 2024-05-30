@@ -36,10 +36,6 @@ jobs:
     
     - name: Run setup
       run: |
-        sudo bash -c ~/dotfiles/.profile
-        echo "================================================================"
-        env
-        echo "================================================================"
         bash -c ~/dotfiles/setup/setup.sh
 
     - name: Run tests

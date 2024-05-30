@@ -7,22 +7,57 @@
 set -e
 
 # =============================================================================
-# Initial check to explode before anything
-# =============================================================================
-if [ -z "$XDG_CONFIG_HOME" ]; then
-    echo "XDG_CONFIG_HOME not defined."
-    exit 1
-fi
-
-if [ -z "$ZSH_CUSTOM" ]; then
-    echo "ZSH_CUSTOM not defined."
-    exit 1
-fi
-
-
-# =============================================================================
 # Variables
 # =============================================================================
+# XDG paths
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_HOME_DIR="$HOME"
+export XDG_CONFIG_DIR="$HOME/.config"
+export XDG_DESKTOP_DIR="$HOME"
+export XDG_TRASH_DIR="$HOME/.local/share/Trash"
+
+# nvm
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+
+#ghcup
+export GHCUP_USE_XDG_DIRS=true
+
+# dotnet
+export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
+
+# Docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+
+# Wine
+export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+
+# ZSH
+export ZDOTDIR="$HOME/.config/shell/zsh"
+export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
+
+# Ranger
+export RANGER_LOAD_DEFAULT_RC=false
+
+# Zotero variables
+export REMOTE_PAPERS="mi_unidad:salvador/doctorado/biblioteca/zotero"
+export LOCAL_PAPERS="$XDG_HOME_DIR/Documentos/zotero"
+
+# virtualenvwrapper
+export WORKON_HOME="$HOME/.virtualenvs"
+export PROJECT_HOME="$XDG_HOME_DIR/code"
+export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
+
+# Julia
+export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
+export JULIA_HISTORY="$XDG_DATA_HOME/julia/logs/repl_history.jl"
+export JULIAUP_DEPOT_PATH="$XDG_DATA_HOME/julia"
+
+# Rust
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+
 # Colors
 green="\e[32m"
 normal="\e[0m"
