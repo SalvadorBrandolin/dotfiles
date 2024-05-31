@@ -6,7 +6,9 @@
 apps_list="Zotero
 Sioyek
 Stremio
-RetroArch"
+RetroArch
+OpenChrom
+"
 
 
 o=$(echo "$apps_list" | dmenu -i -fn "Liberation Mono Bold")
@@ -16,4 +18,5 @@ case "$o" in
 	"Sioyek") ~/.local/share/Sioyek/Sioyek-x86_64.AppImage ;;
 	"Stremio") flatpak run com.stremio.Stremio ;;
 	"RetroArch") flatpak run org.libretro.RetroArch ;;
+	"OpenChrom") ~/.local/share/openchrom/openchrom ;;
 esac
