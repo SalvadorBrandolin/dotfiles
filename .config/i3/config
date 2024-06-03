@@ -73,8 +73,8 @@ bindsym $mod+F9 exec firefox
 bindsym $mod+F10 exec libreoffice --calc
 
 # !! Screenshots to images folder
-bindsym $mod+Print exec --no-startup-id maim "/$HOME/Imágenes/$(date)"
-bindsym $mod+Shift+Print exec --no-startup-id maim --select "/$HOME/Imágenes/$(date)"
+bindsym $mod+Print exec --no-startup-id maim "/$HOME/Imágenes/$(date).jpg"
+bindsym $mod+Shift+Print exec --no-startup-id maim --select "/$HOME/Imágenes/$(date).jpg"
 
 # !! Clipboard Screenshots
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
