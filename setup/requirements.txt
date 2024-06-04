@@ -17,6 +17,7 @@ i3blocks
 jackd2
 kitty
 libreoffice
+liblapack-dev
 lxappearance
 maim
 nautilus
