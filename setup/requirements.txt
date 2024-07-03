@@ -45,4 +45,5 @@ x11-xserver-utils
 xclip
 xdotool
 xss-lock
+xournalpp
 zsh
