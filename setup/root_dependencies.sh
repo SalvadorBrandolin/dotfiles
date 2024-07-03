@@ -26,3 +26,4 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak update
 flatpak install -y flathub com.stremio.Stremio
 flatpak install -y flathub org.libretro.RetroArch
+flatpak install -y flathub com.lablicate.OpenChrom
