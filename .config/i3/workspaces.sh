@@ -7,6 +7,7 @@ workspaces="iol
 dipypr
 ugropy
 dotfiles
+epox_lim
 bioactividad2023
 articulo_bioactividad
 ReactorD
@@ -20,6 +21,7 @@ case "$wp" in
 	"ugropy") code ~/code/ugropy ;;
 	"dipypr") code ~/code/dipypr ;;
 	"dotfiles") code ~/dotfiles ;;
+	"epox_lim") code ~/code/epox_lim ;;
 	"bioactividad2023") code ~/code/bioactividad_2023 ;;
 	"articulo_bioactividad") code ~/code/articulo_bioactividad2023 ;;
 esac
