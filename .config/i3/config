@@ -258,7 +258,7 @@ client.focused                 #000000 #ff9a00 #444444 #27a7d8
 for_window [class="^.*"] border pixel 1
 
 # Suspension time
-exec --no-startup-id xset -dpms s off
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Latam keymap
 exec setxkbmap latam
