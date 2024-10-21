@@ -72,6 +72,7 @@ for f in $HOME/.local/bin/my_scripts/*.sh; do source $f; done
 alias sioyek="~/.local/share/Sioyek/Sioyek-x86_64.AppImage"
 alias zotero="~/.local/share/Zotero/zotero"
 alias jill="jill.sh"
+alias install_dipy="pip install git+ssh://git@github.com/ipqa-research/dipypr.git"
 
 # Created by `pipx` on 2024-05-30 19:47:38
 export PATH="$PATH:/home/salvador/.local/bin"
