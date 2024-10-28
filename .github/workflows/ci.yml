@@ -38,4 +38,6 @@ jobs:
         bash -c ./setup/setup.sh
 
     - name: Run tests
-      run: ./tests/runtests.sh
+      run: |
+        cd ~/dotfiles
+        ./tests/runtests.sh
