@@ -10,8 +10,5 @@ git clone https://github.com/b3nj5m1n/xdg-ninja.git ~/.local/bin/xdg-ninja
 # ranger plugins
 git clone https://github.com/SL-RU/ranger_udisk_menu.git ~/.config/ranger/plugins/ranger_udisk_menu
 
-# My code
+# My code (clone manually the thing you want)
 mkdir ~/code
-
-git clone git@github.com:SalvadorBrandolin/ugropy.git ~/code/ugropy
-git clone git@github.com:ipqa-research/yaeos.git ~/code/yaeos

@@ -77,3 +77,7 @@ alias alias_install_dipy="pip install git+ssh://git@github.com/ipqa-research/dip
 alias alias_clean_fortran_mod="find . -name '*.mod' -type f -delete && find . -name '*.smod' -type f -delete"
 alias alias_clone_fortran_vscode="git clone https://github.com/ipqa-research/vscode-fortran .vscode"
 alias alias_clone_cpp_vscode="git clone git@github.com:SalvadorBrandolin/cpp_vscode.git .vscode"
+
+alias alias_clone_ugropy="git clone git@github.com:ipqa-research/ugropy.git"
+alias alias_clone_yaeos="git clone git@github.com:ipqa-research/yaeos.git"
+alias alias_clone_dipypr="git clone git@github.com:ipqa-research/dipypr.git"
