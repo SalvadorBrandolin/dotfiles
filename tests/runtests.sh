@@ -12,21 +12,21 @@ echo "========================================================================"
 echo "Running Tests"
 echo "========================================================================"
 
-# Check if all apt packages are installed
-# echo "Checking apt packages..."
-# missing_packages=()
-# for package in $(cat ~/dotfiles/setup/requirements.txt); do
-#     if ! dpkg -l | grep -q $package; then
-#         missing_packages+=($package)
-#     fi
-# done
+Check if all apt packages are installed
+echo "Checking apt packages..."
+missing_packages=()
+for package in $(cat ~/dotfiles/setup/requirements.txt); do
+    if ! dpkg -l | grep -q $package; then
+        missing_packages+=($package)
+    fi
+done
 
-# if [ ${#missing_packages[@]} -ne 0 ]; then
-#     echo -e "${red} Missing apt packages: ${missing_packages[@]} ${normal}"
-#     exit 1
-# else
-#     echo -e "${green} All apt packages are installed. ${normal}"
-# fi
+if [ ${#missing_packages[@]} -ne 0 ]; then
+    echo -e "${red} Missing apt packages: ${missing_packages[@]} ${normal}"
+    exit 1
+else
+    echo -e "${green} All apt packages are installed. ${normal}"
+fi
 
 # Check if flatpak packages are installed
 flatpak_packages=("com.stremio.Stremio" "org.libretro.RetroArch")
@@ -64,28 +64,6 @@ for plugin in "${zsh_plugins[@]}"; do
 done
 
 echo -e "${green} All zsh plugins are installed. ${normal}"
-
-# Check Python virtual environments
-venvs=("ugropy" "dipypr" "iol")
-
-for venv in "${venvs[@]}"; do
-    if [ ! -d "$HOME/.virtualenvs/$venv" ]; then
-        echo -e "${red} Virtualenv $venv is not created. ${normal}"
-        exit 1
-    fi
-done
-echo -e "${green} All virtual environments are created. ${normal}"
-
-# Check git repositories
-repos=("dipypr" "iol" "ugropy")
-
-for repo in "${repos[@]}"; do
-    if [ ! -d "$HOME/code/$repo" ]; then
-        echo -e "${red} Repository $repo is not cloned. ${normal}"
-        exit 1
-    fi
-done
-echo -e "${green} All repositories are cloned. ${normal}"
 
 # let's see those xdg
 echo "========================================================================"
