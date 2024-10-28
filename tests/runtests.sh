@@ -12,7 +12,7 @@ echo "========================================================================"
 echo "Running Tests"
 echo "========================================================================"
 
-Check if all apt packages are installed
+# Check if all apt packages are installed
 echo "Checking apt packages..."
 missing_packages=()
 for package in $(cat ~/dotfiles/setup/requirements.txt); do
