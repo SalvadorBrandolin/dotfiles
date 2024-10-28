@@ -85,7 +85,7 @@ echo -e "====================================================================="
 echo -e ${normal}
 
 # set zsh as default shell
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
 
 sudo apt update && sudo apt upgrade
 
