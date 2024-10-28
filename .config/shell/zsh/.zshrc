@@ -68,12 +68,12 @@ source $HOME/.local/bin/virtualenvwrapper.sh
 # my scripts
 for f in $HOME/.local/bin/my_scripts/*.sh; do source $f; done
 
-# Alias
+# Aliases
 alias sioyek="~/.local/share/Sioyek/Sioyek-x86_64.AppImage"
 alias zotero="~/.local/share/Zotero/zotero"
 alias jill="jill.sh"
-alias install_dipy="pip install git+ssh://git@github.com/ipqa-research/dipypr.git"
-alias clean_fortran_mod="find . -name '*.mod' -type f -delete && find . -name '*.smod' -type f -delete"
 
-# Created by `pipx` on 2024-05-30 19:47:38
-export PATH="$PATH:/home/salvador/.local/bin"
+alias alias_install_dipy="pip install git+ssh://git@github.com/ipqa-research/dipypr.git"
+alias alias_clean_fortran_mod="find . -name '*.mod' -type f -delete && find . -name '*.smod' -type f -delete"
+alias alias_clone_fortran_vscode="git clone https://github.com/ipqa-research/vscode-fortran .vscode"
+alias alias_clone_cpp_vscode="git clone git@github.com:SalvadorBrandolin/cpp_vscode.git .vscode"

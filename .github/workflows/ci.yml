@@ -15,7 +15,7 @@ jobs:
       with:
         python-version: 3.x
 
-    - name: Set up SSH
+    - name: Set up SSH to clone private repositories
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
@@ -28,13 +28,14 @@ jobs:
     - name: Copy dotfiles into HOME
       run: cp -r . ~/dotfiles
 
-    - name: Stow
+    - name: Install Stow
       run: |
         sudo apt install -y stow
     
     - name: Run setup
       run: |
-        bash -c ~/dotfiles/setup/setup.sh
+        cd ~/dotfiles
+        bash -c ./setup/setup.sh
 
     - name: Run tests
       run: ./tests/runtests.sh

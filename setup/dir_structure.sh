@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DDIR="$HOME/dotfiles"
+DDIR="/home/$SUDO_USER/dotfiles"
 DIRS_TO_STOW=("$DDIR/.local" "$DDIR/.config")
 
 # Recreate dir structure on HOME config folders
