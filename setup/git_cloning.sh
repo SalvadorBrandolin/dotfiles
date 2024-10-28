@@ -13,6 +13,5 @@ git clone https://github.com/SL-RU/ranger_udisk_menu.git ~/.config/ranger/plugin
 # My code
 mkdir ~/code
 
-git clone git@github.com:SalvadorBrandolin/dipypr.git ~/code/dipypr
-git clone git@github.com:SalvadorBrandolin/iol.git ~/code/iol
 git clone git@github.com:SalvadorBrandolin/ugropy.git ~/code/ugropy
+git clone git@github.com:ipqa-research/yaeos.git ~/code/yaeos

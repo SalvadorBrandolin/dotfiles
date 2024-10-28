@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # =============================================================================
-# The script assumes that git is already configured. Also the dotfiles must
-# be stowed and machine rebooted, then run this script.
+# The script assumes that git is already configured. Also stow must be 
+# installed, then run this script.
 #
 # With:
 # >>> pwd
