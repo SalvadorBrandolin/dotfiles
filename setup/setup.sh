@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # =============================================================================
 # The script assumes that git is already configured. Also the dotfiles must
 # be stowed and machine rebooted, then run this script.
@@ -17,7 +18,17 @@ sudo apt update
 
 echo -e ${green}
 echo -e "====================================================================="
-echo -e "Source profile (just in case)"
+echo -e "Recreating the configuration folders structure and stowing"
+echo -e "====================================================================="
+echo -e ${normal}s
+
+sudo bash ~/dotfiles/setup/dir_structure.sh
+stow $HOME/dotfiles --adopt
+
+
+echo -e ${green}
+echo -e "====================================================================="
+echo -e "Source profile"
 echo -e "====================================================================="
 echo -e ${normal}
 
@@ -39,21 +50,7 @@ echo -e "Installing no root dependencies"
 echo -e "====================================================================="
 echo -e ${normal}
 
-# oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-
-# Install jill.sh (Julia -- TODO: need to change to juliaup?)
-cd $HOME/.local/bin && curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/main/jill.sh > jill.sh && cd -
-
-# Install kitty
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-
-# Install fortran language server, fprettify and flinter (FedeBenelli code)
-packages=( fortls findent flinter ford fpm fypp )
-    
-for package in ${packages[@]}; do
-    pipx install $package --force
-done
+sudo bash ~/dotfiles/setup/no_root_dependencies.sh
 
 
 echo -e ${green}
@@ -62,22 +59,7 @@ echo -e "Git cloning"
 echo -e "====================================================================="
 echo -e ${normal}
 
-# zsh plugins
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
-# xdg ninja
-git clone https://github.com/b3nj5m1n/xdg-ninja.git ~/.local/bin/xdg-ninja
-
-# ranger plugins
-git clone https://github.com/SL-RU/ranger_udisk_menu.git ~/.config/ranger/plugins/ranger_udisk_menu
-
-# My code
-mkdir ~/code
-
-git clone git@github.com:SalvadorBrandolin/dipypr.git ~/code/dipypr
-git clone git@github.com:SalvadorBrandolin/iol.git ~/code/iol
-git clone git@github.com:SalvadorBrandolin/ugropy.git ~/code/ugropy
+sudo bash ~/dotfiles/setup/git_cloning.sh
 
 
 echo -e ${green}
@@ -86,18 +68,7 @@ echo -e "Python setup"
 echo -e "====================================================================="
 echo -e ${normal}
 
-# ppa
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt update
-
-sudo apt install python3.10 python3.11 python3.12
-
-# Virtualenvs
-pip install --user virtualenv virtualenvwrapper
-
-zsh -i -c "~/dotfiles/setup/setup_virtualenvs/ugropy.sh"
-zsh -i -c "~/dotfiles/setup/setup_virtualenvs/dipypr.sh"
-zsh -i -c "~/dotfiles/setup/setup_virtualenvs/iol.sh"
+sudo bash ~/dotfiles/setup/python_setup.sh
 
 
 echo -e ${green}

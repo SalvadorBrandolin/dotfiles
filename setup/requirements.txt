@@ -15,9 +15,10 @@ htop
 i3
 i3blocks
 jackd2
+jq
 kitty
-libreoffice
 liblapack-dev
+libreoffice
 lxappearance
 maim
 nautilus
@@ -30,6 +31,7 @@ picom
 pipx
 pulseaudio
 pulseaudio-module-jack
+python3-pygments
 qjackctl
 ranger
 rar
@@ -40,11 +42,13 @@ tuxguitar
 tuxguitar-jsa
 unrar
 unzip
+virtualenv
+virtualenvwrapper
 wget
 x11-utils
 x11-xserver-utils
 xclip
 xdotool
-xss-lock
 xournalpp
+xss-lock
 zsh

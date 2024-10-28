@@ -31,9 +31,6 @@ jobs:
     - name: Stow
       run: |
         sudo apt install -y stow
-        cd ~/dotfiles
-        stow . --adopt
-        git reset --hard
     
     - name: Run setup
       run: |
