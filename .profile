@@ -23,6 +23,7 @@ export BROWSER=firefox
 export SUDO=sudo
 export SHELL="/usr/bin/zsh"
 
+
 # =============================================================================
 # Variables
 # =============================================================================
@@ -69,4 +70,5 @@ export JULIAUP_DEPOT_PATH="$XDG_DATA_HOME/julia"
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
+# rc confs
 [ -f ~/.bashrc ] && . ~/.bashrc
