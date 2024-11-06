@@ -67,7 +67,7 @@ bindsym $mod+o exec ~/.config/i3/workspaces.sh
 
 # ! Binds
 bindsym $mod+p exec $TERMINAL -e ranger
-bindsym $mod+n exec nautilus
+bindsym $mod+n exec $SHELL -c "$dark_nautilus"
 
 bindsym $mod+F9 exec firefox
 bindsym $mod+F10 exec libreoffice --calc
