@@ -37,6 +37,7 @@ ranger
 rar
 screenfetch
 stow
+taskwarrior
 texlive-full
 tuxguitar
 tuxguitar-jsa

@@ -85,3 +85,8 @@ alias alias_clone_yaeos="git clone git@github.com:ipqa-research/yaeos.git"
 alias alias_clone_dipypr="git clone git@github.com:ipqa-research/dipypr.git"
 
 alias alias_jackdrenice="sudo renice -n -20 $(pidof jackdbus)"
+
+## taskwarrior
+alias ta="task add"
+alias tl="task list"
+alias td="task done"
