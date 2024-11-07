@@ -68,25 +68,29 @@ source $HOME/.local/bin/virtualenvwrapper.sh
 # my scripts
 for f in $HOME/.local/bin/my_scripts/*.sh; do source $f; done
 
+
 # Aliases
+## Programs names
 alias sioyek="~/.local/share/Sioyek/Sioyek-x86_64.AppImage"
 alias zotero="~/.local/share/Zotero/zotero"
 alias jill="jill.sh"
 
+## Fast installs
 alias alias_install_dipy="pip install git+ssh://git@github.com/ipqa-research/dipypr.git"
 
-alias alias_clean_fortran_mod="find . -name '*.mod' -type f -delete && find . -name '*.smod' -type f -delete"
-
+## Fast clones 
 alias alias_clone_fortran_vscode="git clone https://github.com/ipqa-research/vscode-fortran .vscode"
 alias alias_clone_cpp_vscode="git clone git@github.com:SalvadorBrandolin/cpp_vscode.git .vscode"
+alias alias_clone_from_my_gh='function _clone_repo1() { git clone git@github.com:SalvadorBrandolin/$1.git; }; _clone_repo1'
+alias alias_clone_from_ipqa='function _clone_repo2() { git clone git@github.com:ipqa-research/$1.git; }; _clone_repo2'
 
-alias alias_clone_ugropy="git clone git@github.com:ipqa-research/ugropy.git"
-alias alias_clone_yaeos="git clone git@github.com:ipqa-research/yaeos.git"
-alias alias_clone_dipypr="git clone git@github.com:ipqa-research/dipypr.git"
-
-alias alias_jackdrenice="sudo renice -n -20 $(pidof jackdbus)"
+## Programming utils
+alias alias_clean_fortran_mod="find . -name '*.mod' -type f -delete && find . -name '*.smod' -type f -delete"
 
 ## taskwarrior
 alias ta="task add"
 alias tl="task list"
 alias td="task done"
+
+## Misc
+alias alias_jackdrenice="sudo renice -n -20 $(pidof jackdbus)"
