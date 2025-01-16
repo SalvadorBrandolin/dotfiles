@@ -33,6 +33,7 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 # Nautilus
 export dark_nautilus="GTK_THEME=Adwaita-dark nautilus"
+export light_nautilus="GTK_THEME=Adwaita nautilus"
 
 # taskwarrior
 export TASKRC="$XDG_CONFIG_HOME/task/taskrc"
