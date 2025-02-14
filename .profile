@@ -31,13 +31,6 @@ export SHELL="/usr/bin/zsh"
 export PATH="$PATH:/usr/local/include:/usr/include:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/packages/julias:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin:$HOME/.local/kitty.app/bin/"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
-# Nautilus
-export dark_nautilus="GTK_THEME=Adwaita-dark nautilus"
-export light_nautilus="GTK_THEME=Adwaita nautilus"
-
-# taskwarrior
-export TASKRC="$XDG_CONFIG_HOME/task/taskrc"
-
 # nvm
 export NVM_DIR="$XDG_DATA_HOME/nvm"
 

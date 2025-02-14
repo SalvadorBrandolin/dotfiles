@@ -29,6 +29,7 @@ pandoc
 pavucontrol
 picom
 pipx
+playerctl
 pulseaudio
 pulseaudio-module-jack
 python3-pygments
@@ -37,7 +38,6 @@ ranger
 rar
 screenfetch
 stow
-taskwarrior
 texlive-full
 tuxguitar
 tuxguitar-jsa

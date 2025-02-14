@@ -87,10 +87,5 @@ alias alias_clone_from_ipqa='function _clone_repo2() { git clone git@github.com:
 ## Programming utils
 alias alias_clean_fortran_mod="find . -name '*.mod' -type f -delete && find . -name '*.smod' -type f -delete"
 
-## taskwarrior
-alias ta="task add"
-alias tl="task list"
-alias td="task done"
-
 ## Misc
 alias alias_jackdrenice="sudo renice -n -20 $(pidof jackdbus)"
