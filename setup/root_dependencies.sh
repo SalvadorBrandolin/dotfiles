@@ -22,6 +22,11 @@ echo -e "Installing flatpak dependencies"
 echo -e "====================================================================="
 echo -e ${normal}
 
+# Zotero
+wget -qO- https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash
+sudo apt update
+sudo apt install zotero
+
 # flatpak packages
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak update

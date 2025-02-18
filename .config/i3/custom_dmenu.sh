@@ -15,7 +15,6 @@ OpenChrom
 o=$(echo "$apps_list" | dmenu -i -fn "Liberation Mono Bold")
 
 case "$o" in
-	"Zotero") ~/.local/share/Zotero/zotero ;;
 	"Obsidian") flatpak run md.obsidian.Obsidian ;;
 	"Sioyek") ~/.local/share/Sioyek/Sioyek-x86_64.AppImage ;;
 	"Stremio") flatpak run com.stremio.Stremio ;;
