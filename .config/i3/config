@@ -201,14 +201,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Open workspace on tabbed layout
-for_window [workspace="1"] layout tabbed
-for_window [workspace="2"] layout tabbed
-for_window [workspace="3"] layout tabbed
-for_window [workspace="4"] layout tabbed
-for_window [workspace="5"] layout tabbed
-for_window [workspace="6"] layout tabbed
-for_window [workspace="7"] layout tabbed
-for_window [workspace="8"] layout tabbed
+workspace_layout tabbed
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
