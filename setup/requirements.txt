@@ -10,6 +10,7 @@ g++
 gcc
 gdb
 gfortran
+gromit-mpx
 guitarix
 htop
 i3

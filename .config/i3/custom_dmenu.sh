@@ -7,6 +7,7 @@ apps_list="Obsidian
 Stremio
 RetroArch
 OpenChrom
+Moonlight
 "
 
 
@@ -17,4 +18,5 @@ case "$o" in
 	"Stremio") flatpak run com.stremio.Stremio ;;
 	"RetroArch") flatpak run org.libretro.RetroArch ;;
 	"OpenChrom") flatpak run com.lablicate.OpenChrom ;;
+	"Moonlight") flatpak run com.moonlight_stream.Moonlight ;;
 esac
