@@ -91,6 +91,11 @@ bindsym $mod+Shift+Print exec --no-startup-id maim --hidecursor --select "/$HOME
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Shift+Print exec --no-startup-id maim --hidecursor --select | xclip -selection clipboard -t image/png
 
+# !! Screenshot to window
+for_window [class="screenshot_window"] floating enable, move position center
+
+bindsym $mod+Ctrl+Print exec --no-startup-id maim --hidecursor --select "$HOME/Imágenes/window_screenshot.jpg" && feh --auto-zoom "$HOME/Imágenes/window_screenshot.jpg" --class screenshot_window
+
 # !! Scratchpad
 bindsym $mod+Shift+braceleft move scratchpad
 bindsym $mod+Shift+braceright scratchpad show
