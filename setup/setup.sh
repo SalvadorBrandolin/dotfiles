@@ -21,6 +21,15 @@ normal="\e[0m"
 # =============================================================================
 # Begin setup
 # =============================================================================
+echo -e ${green}
+echo -e "====================================================================="
+echo -e "PPAs"
+echo -e "====================================================================="
+echo -e ${normal}
+
+# Add PPAs
+sudo bash ~/dotfiles/setup/1_ppa.sh
+
 sudo apt update && sudo apt upgrade
 
 echo -e ${green}
@@ -29,7 +38,7 @@ echo -e "Recreating the configuration folders structure and stowing"
 echo -e "====================================================================="
 echo -e ${normal}
 
-sudo bash ~/dotfiles/setup/dir_structure.sh
+sudo bash ~/dotfiles/setup/2_dir_structure.sh
 stow . --adopt
 
 
@@ -48,7 +57,7 @@ echo -e "Installing root dependencies"
 echo -e "====================================================================="
 echo -e ${normal}
 
-sudo bash ~/dotfiles/setup/root_dependencies.sh
+sudo bash ~/dotfiles/setup/3_root_dependencies.sh
 
 
 echo -e ${green}
@@ -57,7 +66,7 @@ echo -e "Installing no root dependencies"
 echo -e "====================================================================="
 echo -e ${normal}
 
-sudo bash ~/dotfiles/setup/no_root_dependencies.sh
+sudo bash ~/dotfiles/setup/4_no_root_dependencies.sh
 
 
 echo -e ${green}
@@ -66,7 +75,7 @@ echo -e "Git cloning"
 echo -e "====================================================================="
 echo -e ${normal}
 
-sudo bash ~/dotfiles/setup/git_cloning.sh
+sudo bash ~/dotfiles/setup/5_git_cloning.sh
 
 
 echo -e ${green}
@@ -75,7 +84,7 @@ echo -e "Python setup"
 echo -e "====================================================================="
 echo -e ${normal}
 
-sudo bash ~/dotfiles/setup/python_setup.sh
+sudo bash ~/dotfiles/setup/6_python_setup.sh
 
 
 echo -e ${green}

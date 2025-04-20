@@ -14,6 +14,9 @@ myupdate(){
     rclone selfupdate
     omz update
 
+    # neovim
+    zsh -c update_nvim
+
     # git repositories
     cd ~/.local/bin/xdg-ninja && git pull
     cd ~/.config/ranger/plugins/ranger_udisk_menu && git pull

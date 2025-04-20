@@ -28,7 +28,18 @@ export SHELL="/usr/bin/zsh"
 # Variables
 # =============================================================================
 # Paths
-export PATH="$PATH:/usr/local/include:/usr/include:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/packages/julias:$HOME/.local/bin/xdg-ninja:$HOME/.local/bin/my_scripts:$HOME/.local/bin:$HOME/.local/kitty.app/bin/"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:/usr/local/include"
+export PATH="$PATH:/usr/include"
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:$HOME/packages/julias"
+export PATH="$PATH:$HOME/.local/bin/xdg-ninja"
+export PATH="$PATH:$HOME/.local/bin/my_scripts"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/kitty.app/bin"
+
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 # nvm

@@ -2,10 +2,12 @@ arandr
 build-essential
 curl
 dmenu
+fd-find
 feh
 firefox
 flatpak
 fonts-noto-color-emoji
+fzf
 g++
 gcc
 gdb
@@ -23,7 +25,6 @@ libreoffice
 lxappearance
 maim
 nautilus
-neovim
 numlockx
 p7zip
 pandoc
@@ -37,6 +38,7 @@ python3-pygments
 qjackctl
 ranger
 rar
+ripgrep
 screenfetch
 stow
 texlive-full
