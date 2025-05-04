@@ -21,6 +21,7 @@ i3blocks
 jackd2
 jq
 kitty
+libblas-dev
 libjack-jackd2-dev
 liblapack-dev
 libreoffice
@@ -32,6 +33,7 @@ p7zip
 pandoc
 pavucontrol
 picom
+pip
 pipx
 playerctl
 pulseaudio

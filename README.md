@@ -2,10 +2,11 @@ Wallpaper: https://wallpapers.com/wallpapers/metal-gear-rex-metal-gear-solid-8w3
 
 ## Installing instructions
 ### Core installation
+Username should be `salvador`.
 
 ```shell
 cd
-git clone git@github.com:SalvadorBrandolin/dotfiles.git
+git clone --recurse-submodules git@github.com:SalvadorBrandolin/dotfiles.git
 cd dotfiles
 ./setup/setup.sh
 ```
@@ -14,10 +15,9 @@ cd dotfiles
 - vscode
 - OpenChrom
 - Rclone
-- Zotero
+- Zotero plugins
   - Zotero better bibtex
   - Zotero better notes
   - ZotMoov (https://github.com/wileyyugioh/zotmoov)
-- Sioyek
 - Clone personal repositories
 
