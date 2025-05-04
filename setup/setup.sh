@@ -28,7 +28,10 @@ echo -e "====================================================================="
 echo -e ${normal}
 
 # Add PPAs
-sudo bash ~/dotfiles/setup/1_ppa.sh
+sudo bash ~/dotfiles/setup/1_ppas.sh
+
+# Stow required now
+sudo apt install stow
 
 sudo apt update && sudo apt upgrade
 
