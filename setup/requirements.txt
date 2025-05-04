@@ -1,5 +1,6 @@
 arandr
 build-essential
+cmake
 curl
 dmenu
 fd-find
@@ -20,6 +21,7 @@ i3blocks
 jackd2
 jq
 kitty
+libjack-jackd2-dev
 liblapack-dev
 libreoffice
 lxappearance
