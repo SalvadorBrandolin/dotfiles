@@ -1,3 +1,6 @@
 [submodule ".config/i3blocks/scripts"]
 	path = .config/i3blocks/scripts
 	url = https://github.com/vivien/i3blocks-contrib
+[submodule ".config/shell/zsh/ohmyzsh"]
+	path = .config/shell/zsh/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh
