@@ -1,4 +1,12 @@
-#!/bin/bash
+#!/bin/zsh
+
+set -e
+
+echo -e ${green}
+echo -e "====================================================================="
+echo -e "Installing no root dependencies"
+echo -e "====================================================================="
+echo -e ${normal}
 
 # Install jill.sh (Julia -- TODO: need to change to juliaup?)
 cd $HOME/.local/bin && curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/main/jill.sh > jill.sh && cd -
@@ -12,3 +20,6 @@ packages=( fortls findent flinter ford fpm fypp )
 for package in ${packages[@]}; do
     pipx install $package --force
 done
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
