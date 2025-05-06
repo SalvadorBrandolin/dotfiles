@@ -12,7 +12,7 @@ echo -e "Recreating the configuration folders structure and stowing"
 echo -e "====================================================================="
 echo -e ${normal}
 
-local USER=$(whoami)
+USER="salvador"
 
 mkdir -p /home/$USER/.local/bin
 mkdir -p /home/$USER/.local/share
