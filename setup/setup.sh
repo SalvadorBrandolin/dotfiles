@@ -97,11 +97,4 @@ echo -e "Final configurations"
 echo -e "====================================================================="
 echo -e ${normal}
 
-# set zsh as default shell
-sudo chsh -s $(which zsh)
-
-# go back to dotfiles folder and undo shit that programs add
-cd ~/dotfiles
-git reset --hard
-
 sudo apt update && sudo apt upgrade

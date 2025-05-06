@@ -11,6 +11,15 @@ cd dotfiles
 ./setup/setup.sh
 ```
 
+Then
+
+```shell
+cd ~/dotfiles
+git reset --hard
+stow . --adopt
+sudo chsh -s $(which zsh)
+```
+
 ### By hand installation
 - vscode
 - OpenChrom
