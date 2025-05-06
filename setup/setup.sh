@@ -43,7 +43,7 @@ echo -e "====================================================================="
 echo -e ${normal}
 
 sudo bash ~/dotfiles/setup/2_dir_structure.sh
-stow . --adopt
+sudo stow . --adopt
 
 
 echo -e ${green}
