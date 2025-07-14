@@ -38,6 +38,7 @@ pipx
 playerctl
 pulseaudio
 pulseaudio-module-jack
+pulseeffects
 python3-pygments
 qjackctl
 ranger
