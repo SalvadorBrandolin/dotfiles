@@ -78,8 +78,14 @@ alias sioyek="~/.local/share/Sioyek/Sioyek-x86_64.AppImage"
 alias jill="jill.sh"
 alias nv="nvim"
 
+alias rmv="rmvirtualenv"
+alias mkv="mkvirtualenv"
+
 ## Fast installs
 alias alias_install_dipy="pip install git+ssh://git@github.com/ipqa-research/dipypr.git"
+alias alias_install_thermodiff="pip install git+ssh://git@github.com/SalvadorBrandolin/thermodiff.git"
+alias alias_install_thermo="pip install yaeos ugropy jupyter && alias_install_dipy && alias_install_thermodiff"
+alias alias_install_requirements="xargs apt install -y < ~/dotfiles/setup/requirements.txt"
 
 ## Fast clones 
 alias alias_clone_fortran_vscode="git clone https://github.com/ipqa-research/vscode-fortran .vscode"
@@ -88,7 +94,5 @@ alias alias_clone_from_my_gh='function _clone_repo1() { git clone git@github.com
 alias alias_clone_from_ipqa='function _clone_repo2() { git clone git@github.com:ipqa-research/$1.git; }; _clone_repo2'
 
 ## Programming utils
-alias alias_clean_fortran_mod="find . -name '*.mod' -type f -delete && find . -name '*.smod' -type f -delete"
-
-## Misc
-alias alias_jackdrenice="sudo renice -n -20 $(pidof jackdbus)"
+alias alias_util_fortran_mod="find . -name '*.mod' -type f -delete && find . -name '*.smod' -type f -delete"
+alias alias_util_jackdrenice="sudo renice -n -20 $(pidof jackdbus)"
