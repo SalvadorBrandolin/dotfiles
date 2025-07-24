@@ -15,7 +15,7 @@ cd $HOME/.local/bin && curl -fsSL https://raw.githubusercontent.com/abelsiqueira
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
 # pipx: fortran things mainly
-packages=( fortls findent flinter ford fpm fypp )
+packages=( fortls findent flinter ford fypp )
     
 for package in ${packages[@]}; do
     pipx install $package --force
