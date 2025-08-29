@@ -80,8 +80,9 @@ bindsym $mod+o exec ~/.config/i3/workspaces.sh
 bindsym $mod+p exec $TERMINAL -e ranger
 bindsym $mod+n exec $SHELL -c nautilus
 
-bindsym $modF9 exec firefox
+bindsym $mod+F9 exec firefox
 bindsym $mod+F10 exec libreoffice --calc
+bindsym $mod+F11 exec libreoffice --writer
 
 # !! Screenshots to images folder
 bindsym $mod+Print exec --no-startup-id maim "/$HOME/Imágenes/$(date).jpg"
