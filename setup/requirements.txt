@@ -13,6 +13,7 @@ g++
 gcc
 gdb
 gfortran
+gnuplot
 gromit-mpx
 guitarix
 htop

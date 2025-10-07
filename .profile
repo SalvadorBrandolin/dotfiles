@@ -57,10 +57,6 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 # Wine
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
-# ZSH
-export ZDOTDIR="$HOME/.config/shell/zsh"
-export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
-
 # Ranger
 export RANGER_LOAD_DEFAULT_RC=false
 

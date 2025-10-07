@@ -30,8 +30,8 @@ Finally:
 
 ```shell
 cd ~/dotfiles
-git reset --hard
 stow . --adopt
+git reset --hard
 ./setup/4_git_cloning.sh
 sudo chsh -s $(which zsh)
 ```

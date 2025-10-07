@@ -12,19 +12,21 @@ echo -e "Recreating the configuration folders structure and stowing"
 echo -e "====================================================================="
 echo -e ${normal}
 
-USER="salvador"
+USER="${USER:-$(whoami)}"
 
-mkdir -p /home/$USER/.local/bin
-mkdir -p /home/$USER/.local/share
+# .local
+mkdir -p "$HOME/.local/bin"
+mkdir -p "$HOME/.local/share"
 
-mkdir -p /home/$USER/.config/i3
-mkdir -p /home/$USER/.config/i3blocks
-mkdir -p /home/$USER/.config/kitty
-mkdir -p /home/$USER/.config/nvim
-mkdir -p /home/$USER/.config/ranger
-mkdir -p /home/$USER/.config/shell
+# .config
+mkdir -p "$HOME/.config/i3"
+mkdir -p "$HOME/.config/i3blocks"
+mkdir -p "$HOME/.config/kitty"
+mkdir -p "$HOME/.config/nvim"
+mkdir -p "$HOME/.config/ranger"
+mkdir -p "$HOME/.config/shell"
 
-sudo stow . --adopt
+stow . --adopt
 
 read -r -p "¿Reboot now? [Y/n] " answer
 

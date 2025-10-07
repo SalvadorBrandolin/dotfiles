@@ -1,4 +1,7 @@
 # Path to your oh-my-zsh installation.
+# ZSH
+export ZDOTDIR="$HOME/.config/shell/zsh"
+export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
 export ZSH="$ZDOTDIR/ohmyzsh"
 
 # Theme
@@ -70,7 +73,10 @@ elif [ -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]; then
 fi
 
 # my scripts
-for f in $HOME/.local/bin/my_scripts/*.sh; do source $f; done
+for f in $HOME/.local/bin/my_scripts/*.sh(N); do
+    source $f
+done
+
 
 # Aliases
 ## Programs names
