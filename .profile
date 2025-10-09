@@ -42,10 +42,14 @@ export PATH="$PATH:$HOME/.local/kitty.app/bin"
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
+# zsh
+export ZDOTDIR="$HOME/.config/shell/zsh"
+export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
+
 # nvm
 export NVM_DIR="$XDG_DATA_HOME/nvm"
 
-#ghcup
+# ghcup
 export GHCUP_USE_XDG_DIRS=true
 
 # dotnet

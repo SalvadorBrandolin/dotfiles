@@ -1,7 +1,5 @@
 # Path to your oh-my-zsh installation.
 # ZSH
-export ZDOTDIR="$HOME/.config/shell/zsh"
-export ZSH_CUSTOM="$ZDOTDIR/ohmyzsh/custom"
 export ZSH="$ZDOTDIR/ohmyzsh"
 
 # Theme
