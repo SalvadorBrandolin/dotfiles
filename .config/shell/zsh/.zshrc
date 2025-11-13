@@ -89,7 +89,7 @@ alias mkv="mkvirtualenv"
 alias alias_install_dipy="pip install git+ssh://git@github.com/ipqa-research/dipypr.git"
 alias alias_install_thermodiff="pip install git+ssh://git@github.com/SalvadorBrandolin/thermodiff.git"
 alias alias_install_thermo="pip install yaeos ugropy jupyter && alias_install_dipy && alias_install_thermodiff"
-alias alias_install_requirements="xargs apt install -y < ~/dotfiles/setup/requirements.txt"
+alias alias_install_sys_requirements="xargs apt install -y < ~/dotfiles/setup/requirements.txt"
 
 ## Fast clones 
 alias alias_clone_fortran_vscode="git clone https://github.com/ipqa-research/vscode-fortran .vscode"
