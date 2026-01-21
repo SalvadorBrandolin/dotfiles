@@ -102,7 +102,7 @@ bindsym $mod+Shift+braceleft move scratchpad
 bindsym $mod+Shift+braceright scratchpad show
 
 # !! change workspace between monitors
-bindsym $mod+Shift+s exec ~/.local/bin/my_scripts/i3-display-swap.sh
+bindsym $mod+Shift+s exec ~/.local/bin/no_source_scripts/i3-display-swap.sh
 
 # ! ===========================================================================
 # ! My workspaces
