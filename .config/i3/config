@@ -101,6 +101,9 @@ bindsym $mod+Ctrl+Print exec --no-startup-id maim --hidecursor --select "$HOME/I
 bindsym $mod+Shift+braceleft move scratchpad
 bindsym $mod+Shift+braceright scratchpad show
 
+# !! change workspace between monitors
+bindsym $mod+Shift+s exec ~/.local/bin/my_scripts/i3-display-swap.sh
+
 # ! ===========================================================================
 # ! My workspaces
 # ! ===========================================================================
