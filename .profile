@@ -39,6 +39,7 @@ export PATH="$PATH:$HOME/.local/bin/xdg-ninja"
 export PATH="$PATH:$HOME/.local/bin/my_scripts"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/kitty.app/bin"
+export PATH="$PATH:$HOME/.local/bin/tapenade/bin"
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
