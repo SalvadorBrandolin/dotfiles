@@ -2,6 +2,12 @@
 # ZSH
 export ZSH="$ZDOTDIR/ohmyzsh"
 
+# Lang
+export LANG=en_US.UTF-8
+export LC_MESSAGES=en_US.UTF-8
+export LANGUAGE=en_US:en
+export LC_ALL=en_US.UTF-8
+
 # Theme
 ZSH_THEME="clean" # set by `omz`
 
