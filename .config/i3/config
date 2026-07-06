@@ -88,8 +88,8 @@ bindsym $mod+F10 exec libreoffice --calc
 bindsym $mod+F11 exec libreoffice --writer
 
 # !! Screenshots to images folder
-bindsym $mod+Print exec --no-startup-id maim "/$HOME/Imágenes/$(date).jpg"
-bindsym $mod+Shift+Print exec --no-startup-id maim --hidecursor --select "/$HOME/Imágenes/$(date).jpg"
+bindsym $mod+Print exec --no-startup-id maim "/$HOME/Pictures/$(date).jpg"
+bindsym $mod+Shift+Print exec --no-startup-id maim --hidecursor --select "/$HOME/Pictures/$(date).jpg"
 
 # !! Clipboard Screenshots
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
@@ -98,7 +98,7 @@ bindsym Shift+Print exec --no-startup-id maim --hidecursor --select | xclip -sel
 # !! Screenshot to window
 for_window [class="screenshot_window"] floating enable, move position center
 
-bindsym $mod+Ctrl+Print exec --no-startup-id maim --hidecursor --select "$HOME/Imágenes/window_screenshot.jpg" && feh --auto-zoom "$HOME/Imágenes/window_screenshot.jpg" --class screenshot_window
+bindsym $mod+Ctrl+Print exec --no-startup-id maim --hidecursor --select "$HOME/Pictures/window_screenshot.jpg" && feh --auto-zoom "$HOME/Pictures/window_screenshot.jpg" --class screenshot_window
 
 # !! Scratchpad
 bindsym $mod+Shift+braceleft move scratchpad

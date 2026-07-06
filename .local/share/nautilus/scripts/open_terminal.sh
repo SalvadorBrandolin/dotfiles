@@ -27,4 +27,4 @@ if [ -n "`echo "$destination" | grep '^[a-zA-Z0-9]\+:'`" ]; then
     exit 1
 fi
 
-$TERMINAL --working-directory="$destination"
+/usr/bin/kitty -d "$destination" /usr/bin/zsh

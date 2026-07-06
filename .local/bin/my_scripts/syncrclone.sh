@@ -13,7 +13,7 @@ syncrc() {
             l)
 	            local local="$OPTARG"
 
-		    if [ ! -s $local ]; then
+		    if [ ! -d $local ]; then
 			echo "Error: ${local} path doesn't exist"
 			return 0
 		    fi

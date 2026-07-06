@@ -23,7 +23,6 @@ export BROWSER=firefox
 export SUDO=sudo
 export SHELL="/usr/bin/zsh"
 
-
 # =============================================================================
 # Variables
 # =============================================================================
@@ -67,7 +66,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 
 # Zotero variables
 export REMOTE_PAPERS="mi_unidad:salvador/doctorado/biblioteca/zotero"
-export LOCAL_PAPERS="$XDG_HOME_DIR/Documentos/zotero"
+export LOCAL_PAPERS="$XDG_HOME_DIR/Documents/zotero"
 
 # virtualenvwrapper
 export WORKON_HOME="$HOME/.virtualenvs"
