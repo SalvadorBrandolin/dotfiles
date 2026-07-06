@@ -97,6 +97,9 @@ alias alias_clone_cpp_vscode="git clone git@github.com:SalvadorBrandolin/cpp_vsc
 alias alias_clone_from_my_gh='function _clone_repo1() { git clone git@github.com:SalvadorBrandolin/$1.git; }; _clone_repo1'
 alias alias_clone_from_ipqa='function _clone_repo2() { git clone git@github.com:ipqa-research/$1.git; }; _clone_repo2'
 
+## Commands that I forget
+alias alias_discos="lsblk -o NAME,SIZE,MODEL,TRAN"
+
 ## Programming utils
 alias alias_util_fortran_mod="find . -name '*.mod' -type f -delete && find . -name '*.smod' -type f -delete"
 alias alias_util_jackdrenice="sudo renice -n -20 $(pidof jackdbus)"

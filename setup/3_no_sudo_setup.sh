@@ -32,7 +32,9 @@ done
 # Prevent it from opening a new interactive shell
 echo -e "${green}Installing Oh-My-Zsh...${normal}"
 
+export ZSH="$ZDOTDIR/ohmyzsh"
 export RUNZSH=no
+export CHSH=no
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
