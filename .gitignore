@@ -1,2 +1,5 @@
 .vscode
 .config/shell/zsh/ohmyzsh/
+.local/share/nautilus/tags
+.local/share/nautilus/tracker2-migration-complete
+.config/shell/zsh/.zcompdump-*
