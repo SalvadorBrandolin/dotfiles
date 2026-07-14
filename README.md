@@ -40,6 +40,7 @@ chsh -s $(which zsh)
 - vscode
 - OpenChrom
 - Rclone
+  - rclone bisync $REMOTE_PAPERS $LOCAL_PAPERS -P --resync --resync-mode path2
 - Zotero plugins
   - Zotero better bibtex
   - Zotero better notes
