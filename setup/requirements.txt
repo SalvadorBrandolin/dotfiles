@@ -27,6 +27,7 @@ lxappearance
 maim
 nautilus
 numlockx
+okular
 p7zip
 pandoc
 pavucontrol
@@ -35,6 +36,7 @@ pip
 pipx
 playerctl
 python3-pygments
+qpwgraph
 ranger
 rar
 ripgrep
