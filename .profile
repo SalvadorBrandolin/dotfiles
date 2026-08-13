@@ -73,6 +73,9 @@ export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$XDG_HOME_DIR/code"
 export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
 
+# FPM
+export FPM_FC=gfortran-14
+
 # Julia
 export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
 export JULIA_HISTORY="$XDG_DATA_HOME/julia/logs/repl_history.jl"
