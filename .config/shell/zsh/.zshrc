@@ -109,3 +109,6 @@ alias alias_discos="lsblk -o NAME,SIZE,MODEL,TRAN"
 ## Programming utils
 alias alias_util_fortran_mod="find . -name '*.mod' -type f -delete && find . -name '*.smod' -type f -delete"
 alias alias_util_jackdrenice="sudo renice -n -20 $(pidof jackdbus)"
+
+# opencode
+export PATH=/home/salvador/.opencode/bin:$PATH
