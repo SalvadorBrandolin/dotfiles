@@ -75,6 +75,8 @@ export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
 
 # FPM
 export FPM_FC=gfortran-14
+export FPM_CC=gcc-14
+export FPM_CXX=g++-14
 
 # Julia
 export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
