@@ -298,7 +298,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec setxkbmap latam
 
 # Wallpaper
-# exec --no-startup-id sh -c 'sleep 2 && feh --bg-fill --no-fehbg /home/salvador/dotfiles/wallpaper.jpg'
+exec_always --no-startup-id feh --bg-fill /home/salvador/dotfiles/wallpaper.jpg
 
 # Opacity
 exec picom -b -f
